@@ -1,19 +1,12 @@
 <div style="font-family: charter;">
 
-<table>
-<tr>
-<td width="82%">
+<img align="right" src="assets/readme/favicon.png" alt="Flat-Pack Bench logo" width="120"/>
+
 <h1><i>Flat-Pack Bench</i>:<br/>Evaluating Spatio-Temporal Understanding in Large Vision-Language Models through Furniture Assembly</h1>
-</td>
-<td width="18%" align="right">
-<img src="assets/readme/favicon.png" alt="Flat-Pack Bench logo" width="120"/>
-</td>
-</tr>
-</table>
 
 <p>
 <a href="https://justachetan.github.io/" target="_blank">Aditya Chetan</a>,
-<a href="https://www.linkedin.com/in/ericcai32/" target="_blank">Eric Cai,
+<a href="https://www.linkedin.com/in/ericcai32/" target="_blank">Eric Cai</a>,
 <a href="https://peey.github.io/" target="_blank">Peeyush Kushwaha</a>,
 <a href="https://bharathrajn.com/" target="_blank">Bharath Raj Nagoor Kani</a>,
 <a href="https://utkarshmall.com/" target="_blank">Utkarsh Mall</a>,
