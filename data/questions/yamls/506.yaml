@@ -1,0 +1,18 @@
+category: Chair
+name: marius
+video_id: 2Hgl4ZtO1Lc
+frame_idx: [0, 36]
+question_category: tracking
+template_type: track_single
+question_params:
+  query_part: '0'
+options:
+- raw: '0'
+- raw: '1'
+correct_option:
+  raw: '1'
+  idx: 1
+jumble_map:
+  '0': '1'
+  '1': '0'
+  '2': '2'

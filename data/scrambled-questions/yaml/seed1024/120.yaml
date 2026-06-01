@@ -1,0 +1,58 @@
+category: Chair
+correct_option:
+  idx: 0
+  raw:
+  - - '3'
+    - '3'
+  - - '2'
+    - '2'
+  - - '1'
+    - '4'
+frame_idx:
+- 102
+- 286
+jumble_map:
+  '1': '4'
+  '2': '2'
+  '3': '3'
+  '4': '1'
+metadata:
+  part_id_mapping:
+    '0': '3'
+    '1': '2'
+    '2': '4'
+    '3': '1'
+    '4': '0'
+name: vedbo
+options:
+- raw:
+  - - '3'
+    - '3'
+  - - '2'
+    - '2'
+  - - '1'
+    - '4'
+- raw:
+  - - '3'
+    - '3'
+  - - '2'
+    - '2'
+  - - '1'
+    - '1'
+- raw:
+  - - '3'
+    - '3'
+  - - '2'
+    - '4'
+  - - '1'
+    - '4'
+- raw:
+  - - '3'
+    - '3'
+  - - '2'
+    - '1'
+  - - '1'
+    - '2'
+question_category: tracking
+template_type: track_multi
+video_id: UUEBbyiiK1U

@@ -1,0 +1,60 @@
+category: Chair
+correct_option:
+  idx: 0
+  raw:
+  - - '2'
+    - '5'
+  - - '5'
+    - '3'
+  - - '3'
+    - '4'
+frame_idx:
+- 55
+- 25
+jumble_map:
+  '2': '5'
+  '3': '4'
+  '4': '2'
+  '5': '3'
+metadata:
+  part_id_mapping:
+    '0': '6'
+    '2': '4'
+    '3': '3'
+    '4': '7'
+    '5': '2'
+    '6': '5'
+    '7': '0'
+name: bekvam_3017
+options:
+- raw:
+  - - '2'
+    - '5'
+  - - '5'
+    - '3'
+  - - '3'
+    - '4'
+- raw:
+  - - '2'
+    - '2'
+  - - '5'
+    - '5'
+  - - '3'
+    - '3'
+- raw:
+  - - '2'
+    - '4'
+  - - '5'
+    - '3'
+  - - '3'
+    - '5'
+- raw:
+  - - '2'
+    - '5'
+  - - '5'
+    - '3'
+  - - '3'
+    - '5'
+question_category: tracking
+template_type: track_multi
+video_id: yL9VPiHVYtI

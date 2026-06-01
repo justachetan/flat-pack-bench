@@ -1,0 +1,16 @@
+category: Chair
+name: stig
+video_id: _Fvk35D0kgM
+frame_idx: 6
+question_category: temporal_ord
+template_type: many_part_order
+question_params:
+  query_part: '4'
+options:
+- raw: ['7', '8', '2']
+- raw: ['2', '7', '8']
+- raw: ['7', '2', '8']
+- raw: ['2', '8', '7']
+correct_option:
+  raw: ['2', '7', '8']
+  idx: 1

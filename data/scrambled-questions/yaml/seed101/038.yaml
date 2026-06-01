@@ -1,0 +1,40 @@
+category: Chair
+correct_option:
+  idx: 1
+  raw:
+  - '1'
+  - '0'
+  - '4'
+frame_idx: 0
+metadata:
+  part_id_mapping:
+    '0': '4'
+    '1': '1'
+    '2': '3'
+    '3': '2'
+    '4': '0'
+    '5': '5'
+name: applaro
+options:
+- raw:
+  - '1'
+  - '4'
+  - '0'
+- raw:
+  - '1'
+  - '0'
+  - '4'
+- raw:
+  - '4'
+  - '0'
+  - '1'
+- raw:
+  - '0'
+  - '4'
+  - '1'
+question_category: temporal_ord
+question_params:
+  query_part:
+  - '5'
+template_type: many_part_order
+video_id: S3bH_dNQ4Mw

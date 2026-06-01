@@ -1,0 +1,16 @@
+category: Bench
+name: tjusig
+video_id: 9tGOUGtUapo
+frame_idx: 127
+question_category: temporal_ord
+template_type: many_part_order
+question_params:
+  query_part: '5'
+options:
+- raw: ['0', '7', '6']
+- raw: ['0', '6', '7']
+- raw: ['6', '7', '0']
+- raw: ['7', '6', '0']
+correct_option:
+  raw: ['0', '7', '6']
+  idx: 0

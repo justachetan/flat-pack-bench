@@ -1,0 +1,25 @@
+category: Misc
+name: vittsjo_2
+video_id: MsbHf4RuvF8
+frame_idx: [0, 22]
+question_category: "tracking"
+template_type: "track_single"
+question_params:
+  query_part:
+    - "1"
+jumble_map: # use this mapping for swapping (do it symmetrically)
+  - "0": "4"
+  - "1": "6"
+  - "2": "5"
+  - "4": "0"
+  - "5": "2"
+  - "6": "1"
+options:
+  - "raw": "2"
+  - "raw": "5"
+  - "raw": "6"
+  - "raw": "1"
+correct_option:
+  "raw": "6"
+  "idx": 2 # 0-indexed
+

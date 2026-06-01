@@ -1,0 +1,26 @@
+category: Misc
+correct_option:
+  idx: 1
+  raw: '7'
+frame_idx: 32
+metadata:
+  part_id_mapping:
+    '0': '10'
+    '10': '9'
+    '2': '4'
+    '3': '0'
+    '4': '7'
+    '5': '8'
+    '6': '6'
+    '7': '5'
+    '8': '3'
+    '9': '2'
+name: vesken
+options:
+- raw: '0'
+- raw: '7'
+- raw: '8'
+- raw: '6'
+question_category: temporal_loc
+template_type: latest_change
+video_id: RHNPcRZVpRI

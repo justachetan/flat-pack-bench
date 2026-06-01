@@ -1,0 +1,15 @@
+category: Chair
+name: teodores
+video_id: yYBa6o3mv4M
+frame_idx: 10
+question_category: "temporal_ord"
+template_type: "edge_order"
+options:
+  - "raw": [["0", "8"], ["0", "7"], ["0", "6"]]
+  - "raw": [["0", "8"], ["0", "6"], ["0", "7"]]
+  - "raw": [["0", "6"], ["0", "8"], ["0", "7"]]
+  - "raw": [["0", "6"], ["0", "7"], ["0", "8"]]
+correct_option:
+  "raw": [["0", "8"], ["0", "6"], ["0", "7"]]
+  "idx": 1 # 0-indexed
+

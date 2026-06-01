@@ -1,0 +1,22 @@
+category: Chair
+name: teodores
+video_id: yYBa6o3mv4M
+frame_idx: [10, 291] # order sensititve
+question_category: "tracking"
+template_type: "track_multi"
+jumble_map: # use this mapping for swapping in second frame (do it symmetrically)
+  - "1": "2"
+  - "2": "1"
+  - "0": "4"
+  - "4": "0"
+  - "6": "7"
+  - "7": "6"
+options:
+  - "raw": [["0", "0"], ["4", "4"], ["1", "1"], ["2", "2"], ["6", "7"], ["7", "6"]]
+  - "raw": [["0", "1"], ["1", "0"], ["1", "4"], ["4", "1"], ["6", "6"], ["7", "7"]]
+  - "raw": [["0", "4"], ["4", "0"], ["1", "2"], ["2", "1"], ["6", "7"], ["7", "6"]]
+  - "raw": [["0", "1"], ["1", "0"], ["1", "4"], ["4", "1"], ["6", "7"], ["7", "6"]]
+correct_option:
+  "raw": [["0", "4"], ["4", "0"], ["1", "2"], ["2", "1"], ["6", "7"], ["7", "6"]]
+  "idx": 2 # 0-indexed
+

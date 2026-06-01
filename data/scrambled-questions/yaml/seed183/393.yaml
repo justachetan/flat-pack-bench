@@ -1,0 +1,24 @@
+category: Chair
+correct_option:
+  idx: 3
+  raw: '4'
+frame_idx: 40
+metadata:
+  part_id_mapping:
+    '0': '0'
+    '1': '2'
+    '2': '6'
+    '3': '1'
+    '4': '5'
+    '5': '3'
+    '6': '4'
+    '7': '7'
+name: bekvam_3017
+options:
+- raw: '3'
+- raw: '6'
+- raw: '1'
+- raw: '4'
+question_category: temporal_loc
+template_type: latest_change
+video_id: R5JK_qhkdBo

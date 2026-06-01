@@ -1,0 +1,32 @@
+category: Chair
+correct_option:
+  idx: 2
+  raw:
+  - '5'
+  - '3'
+frame_idx: 0
+metadata:
+  part_id_mapping:
+    '0': '1'
+    '1': '4'
+    '2': '5'
+    '3': '2'
+    '4': '3'
+    '5': '0'
+name: applaro
+options:
+- raw:
+  - '5'
+  - '2'
+- raw:
+  - '5'
+  - '0'
+- raw:
+  - '5'
+  - '3'
+- raw:
+  - '5'
+  - '4'
+question_category: mating
+template_type: find_edges
+video_id: S3bH_dNQ4Mw

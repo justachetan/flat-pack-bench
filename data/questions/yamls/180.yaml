@@ -1,0 +1,14 @@
+category: Misc
+name: vittsjo_2
+video_id: MsbHf4RuvF8
+frame_idx: 19
+question_category: temporal_loc
+template_type: latest_change
+options:
+- raw: '0'
+- raw: '1'
+- raw: '2'
+- raw: '4'
+correct_option:
+  raw: '0'
+  idx: 0

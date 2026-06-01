@@ -1,0 +1,45 @@
+category: Table
+correct_option:
+  idx: 0
+  raw:
+  - '6'
+  - '8'
+  - '4'
+frame_idx: 207
+metadata:
+  part_id_mapping:
+    '0': '11'
+    '1': '1'
+    '10': '9'
+    '11': '5'
+    '2': '4'
+    '3': '7'
+    '4': '8'
+    '5': '3'
+    '6': '2'
+    '7': '0'
+    '8': '10'
+    '9': '6'
+name: tornviken
+options:
+- raw:
+  - '6'
+  - '8'
+  - '4'
+- raw:
+  - '4'
+  - '8'
+  - '6'
+- raw:
+  - '6'
+  - '4'
+  - '8'
+- raw:
+  - '8'
+  - '4'
+  - '6'
+question_category: temporal_ord
+question_params:
+  query_part: '3'
+template_type: many_part_order
+video_id: 2PBXoPSeV5E

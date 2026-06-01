@@ -1,0 +1,15 @@
+category: Chair
+name: stig
+video_id: _Fvk35D0kgM
+frame_idx: 6
+question_category: mating
+template_type: 2parts
+question_params:
+  query_part1: '4'
+  query_part2: '2'
+options:
+- raw: 'yes'
+- raw: 'no'
+correct_option:
+  raw: 'yes'
+  idx: 0

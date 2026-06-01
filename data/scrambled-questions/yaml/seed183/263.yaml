@@ -1,0 +1,22 @@
+category: Chair
+correct_option:
+  idx: 3
+  raw: '1'
+frame_idx: 72
+metadata:
+  part_id_mapping:
+    '0': '2'
+    '1': '3'
+    '2': '0'
+    '3': '5'
+    '4': '1'
+    '5': '4'
+name: mammut_1
+options:
+- raw: '0'
+- raw: '5'
+- raw: '4'
+- raw: '1'
+question_category: temporal_loc
+template_type: latest_change
+video_id: FoVtnbm0hPc

@@ -1,0 +1,23 @@
+category: Chair
+name: ronninge
+video_id: d9sENgGhBk4
+frame_idx: [800, 0]
+question_category: tracking
+template_type: track_single
+question_params:
+  query_part: '3'
+options:
+- raw: '3'
+- raw: '4'
+- raw: '0'
+- raw: '2'
+correct_option:
+  raw: '4'
+  idx: 1
+jumble_map:
+  '0': '2'
+  '2': '7'
+  '3': '4'
+  '4': '3'
+  '5': '0'
+  '7': '5'

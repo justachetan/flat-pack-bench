@@ -1,0 +1,42 @@
+category: Shelf
+correct_option:
+  idx: 2
+  raw: '4'
+frame_idx:
+- 81
+- 267
+jumble_map:
+  '0': '4'
+  '10': '6'
+  '12': '0'
+  '4': '12'
+  '6': '10'
+metadata:
+  part_id_mapping:
+    '0': '11'
+    '1': '17'
+    '10': '5'
+    '11': '15'
+    '12': '13'
+    '13': '16'
+    '14': '2'
+    '15': '3'
+    '16': '18'
+    '17': '1'
+    '18': '14'
+    '2': '0'
+    '3': '12'
+    '4': '6'
+    '5': '4'
+    '6': '10'
+name: laiva
+options:
+- raw: '0'
+- raw: '6'
+- raw: '4'
+- raw: '10'
+question_category: tracking
+question_params:
+  query_part: '0'
+template_type: track_single
+video_id: wnGdkC8PmIE

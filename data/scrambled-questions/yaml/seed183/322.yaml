@@ -1,0 +1,36 @@
+category: Chair
+correct_option:
+  idx: 1
+  raw:
+  - - '0'
+    - '6'
+frame_idx: 6
+metadata:
+  part_id_mapping:
+    '0': '9'
+    '1': '7'
+    '2': '4'
+    '3': '0'
+    '4': '2'
+    '5': '3'
+    '6': '6'
+    '7': '8'
+    '8': '1'
+    '9': '5'
+name: stig
+options:
+- raw:
+  - - '0'
+    - '5'
+- raw:
+  - - '0'
+    - '6'
+- raw:
+  - - '0'
+    - '4'
+- raw:
+  - - '0'
+    - '2'
+question_category: mating
+template_type: find_edges
+video_id: _Fvk35D0kgM

@@ -1,0 +1,18 @@
+category: Chair
+name: nordviken
+video_id: P_QFo8h1SX8
+frame_idx: 31
+question_category: "temporal_ord"
+template_type: "many_part_order"
+question_params:
+  query_part: 
+    - "0"
+options:
+  - "raw": ["1", "4", "5", "2"]
+  - "raw": ["5", "4", "2", "1"]
+  - "raw": ["2", "5", "1", "4"]
+  - "raw": ["5", "1", "2", "4"]
+correct_option:
+  "raw": ["1", "4", "5", "2"]
+  "idx": 0 # 0-indexed
+

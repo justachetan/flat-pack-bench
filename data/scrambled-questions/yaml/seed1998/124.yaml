@@ -1,0 +1,22 @@
+category: Chair
+correct_option:
+  idx: 3
+  raw: '5'
+frame_idx: 102
+metadata:
+  part_id_mapping:
+    '0': '0'
+    '1': '1'
+    '2': '3'
+    '3': '4'
+    '4': '2'
+    '5': '5'
+name: grubban
+options:
+- raw: '3'
+- raw: '0'
+- raw: '1'
+- raw: '5'
+question_category: temporal_loc
+template_type: next_change
+video_id: UyOsfaIK2hA

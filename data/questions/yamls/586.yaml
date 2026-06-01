@@ -1,0 +1,15 @@
+category: Misc
+name: vittsjo_2
+video_id: LRsTrDctI9o
+frame_idx: 14
+question_category: mating
+template_type: 2parts
+question_params:
+  query_part1: '4'
+  query_part2: '3'
+options:
+- raw: 'yes'
+- raw: 'no'
+correct_option:
+  raw: 'no'
+  idx: 1

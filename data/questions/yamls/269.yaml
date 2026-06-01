@@ -1,0 +1,15 @@
+category: Chair
+name: bekvam_3017
+video_id: 4QA9SYic4aE
+frame_idx: 10
+question_category: mating
+template_type: find_edges
+options:
+- raw: [['3', '4']]
+- raw: [['5', '4']]
+- raw: [['6', '4']]
+correct_option:
+  raw:
+  - [['5', '4']]
+  - [['6', '4']]
+  idx: [1, 2]

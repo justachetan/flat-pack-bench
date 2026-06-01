@@ -1,0 +1,33 @@
+category: Chair
+correct_option:
+  idx: 1
+  raw: '5'
+frame_idx:
+- 0
+- 102
+jumble_map:
+  '0': '5'
+  '1': '1'
+  '2': '4'
+  '3': '3'
+  '4': '2'
+  '5': '0'
+metadata:
+  part_id_mapping:
+    '0': '2'
+    '1': '4'
+    '2': '5'
+    '3': '0'
+    '4': '3'
+    '5': '1'
+name: grubban
+options:
+- raw: '3'
+- raw: '5'
+- raw: '2'
+- raw: '0'
+question_category: tracking
+question_params:
+  query_part: '0'
+template_type: track_single
+video_id: UyOsfaIK2hA

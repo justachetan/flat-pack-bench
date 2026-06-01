@@ -1,0 +1,64 @@
+category: Chair
+correct_option:
+  idx: 0
+  raw:
+  - - '4'
+    - '3'
+  - - '4'
+    - '0'
+  - - '5'
+    - '0'
+  - - '6'
+    - '7'
+frame_idx: 118
+metadata:
+  part_id_mapping:
+    '0': '1'
+    '1': '4'
+    '2': '0'
+    '3': '3'
+    '4': '6'
+    '5': '7'
+    '6': '2'
+    '7': '5'
+name: bekvam_3017
+options:
+- raw:
+  - - '4'
+    - '3'
+  - - '4'
+    - '0'
+  - - '5'
+    - '0'
+  - - '6'
+    - '7'
+- raw:
+  - - '4'
+    - '3'
+  - - '4'
+    - '0'
+  - - '6'
+    - '7'
+  - - '5'
+    - '0'
+- raw:
+  - - '4'
+    - '0'
+  - - '4'
+    - '3'
+  - - '6'
+    - '7'
+  - - '5'
+    - '0'
+- raw:
+  - - '4'
+    - '0'
+  - - '4'
+    - '3'
+  - - '5'
+    - '0'
+  - - '6'
+    - '7'
+question_category: temporal_ord
+template_type: edge_order
+video_id: R5JK_qhkdBo

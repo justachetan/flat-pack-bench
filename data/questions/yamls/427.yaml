@@ -1,0 +1,22 @@
+category: Bench
+name: tjusig
+video_id: 9tGOUGtUapo
+frame_idx: [10, 49]
+question_category: tracking
+template_type: track_single
+question_params:
+  query_part: '6'
+options:
+- raw: '0'
+- raw: '6'
+- raw: '7'
+- raw: '4'
+correct_option:
+  raw: '0'
+  idx: 0
+jumble_map:
+  '4': '5'
+  '0': '7'
+  '5': '4'
+  '7': '6'
+  '6': '0'

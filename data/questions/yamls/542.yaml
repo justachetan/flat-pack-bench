@@ -1,0 +1,14 @@
+category: Chair
+name: ingolf
+video_id: r_PoGW0Mft0
+frame_idx: 61
+question_category: temporal_ord
+template_type: edge_order
+options:
+- raw: [['0', '4'], ['1', '4'], ['1', '2']]
+- raw: [['1', '4'], ['0', '4'], ['1', '2']]
+- raw: [['0', '2'], ['1', '2'], ['0', '4']]
+- raw: [['1', '2'], ['0', '2'], ['0', '4']]
+correct_option:
+  raw: [['0', '4'], ['1', '4'], ['1', '2']]
+  idx: 0

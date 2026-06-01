@@ -1,0 +1,16 @@
+category: Misc
+name: vesken
+video_id: RHNPcRZVpRI
+frame_idx: 17
+question_category: temporal_ord
+template_type: many_part_order
+question_params:
+  query_part: '2'
+options:
+- raw: ['8', '7', '10', '9']
+- raw: ['7', '8', '9', '10']
+- raw: ['8', '7', '9', '10']
+- raw: ['9', '10', '7', '8']
+correct_option:
+  raw: ['8', '7', '10', '9']
+  idx: 0

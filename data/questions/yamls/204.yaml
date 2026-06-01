@@ -1,0 +1,16 @@
+category: Chair
+name: ronninge
+video_id: d9sENgGhBk4
+frame_idx: 800
+question_category: temporal_ord
+template_type: many_part_order
+question_params:
+  query_part: '3'
+options:
+- raw: ['2', '0', '7', '5']
+- raw: ['0', '2', '5', '7']
+- raw: ['0', '2', '7', '5']
+- raw: ['2', '0', '5', '7']
+correct_option:
+  raw: ['2', '0', '7', '5']
+  idx: 0

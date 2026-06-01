@@ -1,0 +1,16 @@
+category: Chair
+name: applaro
+video_id: S3bH_dNQ4Mw
+frame_idx: 0
+question_category: "mating"
+template_type: "1part"
+question_params:
+  query_part:
+    - "2"
+options:
+  - "raw": "0"
+  - "raw": "4"
+  - "raw": "1"
+correct_option:
+  "raw": ["0", "4"]
+  "idx": [0, 1]

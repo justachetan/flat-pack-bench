@@ -1,0 +1,14 @@
+category: Chair
+name: stig
+video_id: v2WIzqdTfRE
+frame_idx: 106
+question_category: temporal_ord
+template_type: edge_order
+options:
+- raw: [['1', '5'], ['2', '5'], ['0', '4'], ['0', '3']]
+- raw: [['1', '5'], ['2', '5'], ['0', '3'], ['0', '4']]
+- raw: [['2', '5'], ['1', '5'], ['0', '4'], ['0', '3']]
+- raw: [['2', '5'], ['1', '5'], ['0', '3'], ['0', '4']]
+correct_option:
+  raw: [['1', '5'], ['2', '5'], ['0', '3'], ['0', '4']]
+  idx: 1

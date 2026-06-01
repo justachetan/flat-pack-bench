@@ -1,0 +1,21 @@
+category: Table
+name: satsumas
+video_id: CdpuSW0zEAk
+frame_idx: [108, 138]
+question_category: tracking
+template_type: track_multi
+options:
+- raw: [['4', '7'], ['6', '5'], ['2', '3'], ['3', '2']]
+- raw: [['4', '4'], ['6', '6'], ['2', '2'], ['3', '3']]
+- raw: [['4', '7'], ['6', '5'], ['2', '2'], ['3', '3']]
+- raw: [['4', '4'], ['6', '6'], ['2', '3'], ['3', '2']]
+correct_option:
+  raw: [['4', '7'], ['6', '5'], ['2', '3'], ['3', '2']]
+  idx: 0
+jumble_map:
+  '4': '7'
+  '7': '4'
+  '5': '6'
+  '6': '5'
+  '2': '3'
+  '3': '2'

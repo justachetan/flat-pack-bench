@@ -1,0 +1,50 @@
+category: Bench
+correct_option:
+  idx: 1
+  raw:
+  - '1'
+  - '10'
+  - '12'
+  - '4'
+frame_idx: 0
+metadata:
+  part_id_mapping:
+    '0': '6'
+    '1': '8'
+    '10': '12'
+    '11': '3'
+    '12': '1'
+    '2': '11'
+    '3': '5'
+    '4': '2'
+    '5': '7'
+    '6': '0'
+    '7': '10'
+    '8': '4'
+name: applaro_3
+options:
+- raw:
+  - '12'
+  - '4'
+  - '1'
+  - '10'
+- raw:
+  - '1'
+  - '10'
+  - '12'
+  - '4'
+- raw:
+  - '4'
+  - '12'
+  - '1'
+  - '10'
+- raw:
+  - '4'
+  - '12'
+  - '10'
+  - '1'
+question_category: temporal_ord
+question_params:
+  query_part: '8'
+template_type: many_part_order
+video_id: WWdR52SIjQU

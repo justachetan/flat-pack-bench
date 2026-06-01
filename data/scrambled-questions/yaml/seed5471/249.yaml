@@ -1,0 +1,33 @@
+category: Chair
+correct_option:
+  idx: 2
+  raw:
+  - - '0'
+    - '4'
+frame_idx: 1
+metadata:
+  part_id_mapping:
+    '0': '3'
+    '1': '1'
+    '2': '0'
+    '3': '2'
+    '4': '4'
+    '7': '8'
+    '8': '7'
+name: teodores
+options:
+- raw:
+  - - '3'
+    - '0'
+- raw:
+  - - '1'
+    - '4'
+- raw:
+  - - '0'
+    - '4'
+- raw:
+  - - '3'
+    - '4'
+question_category: mating
+template_type: find_edges
+video_id: 9uMjr9AL7Hk

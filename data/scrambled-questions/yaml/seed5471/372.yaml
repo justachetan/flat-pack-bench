@@ -1,0 +1,44 @@
+category: Chair
+correct_option:
+  idx: 0
+  raw:
+  - '2'
+  - '8'
+  - '1'
+frame_idx: 57
+metadata:
+  part_id_mapping:
+    '0': '4'
+    '1': '10'
+    '10': '3'
+    '2': '8'
+    '3': '6'
+    '4': '7'
+    '5': '0'
+    '6': '9'
+    '7': '2'
+    '8': '1'
+    '9': '5'
+name: poang_2
+options:
+- raw:
+  - '2'
+  - '8'
+  - '1'
+- raw:
+  - '1'
+  - '2'
+  - '8'
+- raw:
+  - '8'
+  - '2'
+  - '1'
+- raw:
+  - '2'
+  - '1'
+  - '8'
+question_category: temporal_ord
+question_params:
+  query_part: '3'
+template_type: many_part_order
+video_id: jriFVMF4yB0

@@ -1,0 +1,16 @@
+category: Chair
+name: bekvam_3017
+video_id: R5JK_qhkdBo
+frame_idx: 51
+question_category: temporal_ord
+template_type: many_part_order
+question_params:
+  query_part: '1'
+options:
+- raw: ['3', '2', '5', '6']
+- raw: ['2', '3', '6', '5']
+- raw: ['2', '5', '3', '6']
+- raw: ['3', '2', '6', '5']
+correct_option:
+  raw: ['3', '2', '5', '6']
+  idx: 0

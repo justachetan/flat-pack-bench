@@ -1,0 +1,16 @@
+category: Bench
+name: applaro_3
+video_id: WWdR52SIjQU
+frame_idx: 4
+question_category: temporal_ord
+template_type: many_part_order
+question_params:
+  query_part: '1'
+options:
+- raw: ['10', '8', '12', '7']
+- raw: ['12', '7', '10', '8']
+- raw: ['8', '10', '12', '7']
+- raw: ['8', '10', '7', '12']
+correct_option:
+  raw: ['12', '7', '10', '8']
+  idx: 1

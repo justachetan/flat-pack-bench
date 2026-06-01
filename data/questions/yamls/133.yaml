@@ -1,0 +1,15 @@
+category: Misc
+name: satsumas_2
+video_id: D3kQDzdDwfA
+frame_idx: 86
+question_category: mating
+template_type: 2parts
+question_params:
+  query_part1: '0'
+  query_part2: '6'
+options:
+- raw: 'yes'
+- raw: 'no'
+correct_option:
+  raw: 'no'
+  idx: 1

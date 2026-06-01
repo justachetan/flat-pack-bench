@@ -1,0 +1,46 @@
+category: Misc
+correct_option:
+  idx: 0
+  raw:
+  - '0'
+  - '2'
+  - '1'
+  - '6'
+frame_idx: 14
+metadata:
+  part_id_mapping:
+    '0': '04'
+    '04': '3'
+    '1': '1'
+    '2': '0'
+    '3': '5'
+    '4': '4'
+    '5': '2'
+    '6': '6'
+name: vittsjo_2
+options:
+- raw:
+  - '0'
+  - '2'
+  - '1'
+  - '6'
+- raw:
+  - '1'
+  - '6'
+  - '0'
+  - '2'
+- raw:
+  - '2'
+  - '0'
+  - '6'
+  - '1'
+- raw:
+  - '2'
+  - '1'
+  - '6'
+  - '0'
+question_category: temporal_ord
+question_params:
+  query_part: '4'
+template_type: many_part_order
+video_id: LRsTrDctI9o

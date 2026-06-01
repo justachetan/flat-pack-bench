@@ -1,0 +1,38 @@
+category: Chair
+correct_option:
+  idx: 0
+  raw:
+  - '2'
+  - '0'
+  - '4'
+frame_idx: 50
+metadata:
+  part_id_mapping:
+    '0': '2'
+    '1': '4'
+    '2': '3'
+    '3': '0'
+    '4': '1'
+name: lisabo
+options:
+- raw:
+  - '2'
+  - '0'
+  - '4'
+- raw:
+  - '0'
+  - '2'
+  - '4'
+- raw:
+  - '2'
+  - '4'
+  - '0'
+- raw:
+  - '4'
+  - '2'
+  - '0'
+question_category: temporal_ord
+question_params:
+  query_part: '1'
+template_type: many_part_order
+video_id: QMjLsSkmNWU

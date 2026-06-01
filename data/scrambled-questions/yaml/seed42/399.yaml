@@ -1,0 +1,46 @@
+category: Chair
+correct_option:
+  idx: 0
+  raw:
+  - '5'
+  - '6'
+  - '4'
+  - '3'
+frame_idx: 40
+metadata:
+  part_id_mapping:
+    '0': '0'
+    '1': '1'
+    '2': '6'
+    '3': '5'
+    '4': '2'
+    '5': '4'
+    '6': '3'
+    '7': '7'
+name: bekvam_3017
+options:
+- raw:
+  - '5'
+  - '6'
+  - '4'
+  - '3'
+- raw:
+  - '6'
+  - '5'
+  - '3'
+  - '4'
+- raw:
+  - '6'
+  - '4'
+  - '5'
+  - '3'
+- raw:
+  - '5'
+  - '6'
+  - '3'
+  - '4'
+question_category: temporal_ord
+question_params:
+  query_part: '1'
+template_type: many_part_order
+video_id: R5JK_qhkdBo

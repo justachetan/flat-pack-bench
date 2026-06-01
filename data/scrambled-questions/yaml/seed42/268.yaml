@@ -1,0 +1,35 @@
+category: Chair
+correct_option:
+  idx: 1
+  raw:
+  - - '8'
+    - '7'
+frame_idx: 44
+metadata:
+  part_id_mapping:
+    '0': '6'
+    '1': '4'
+    '2': '8'
+    '3': '1'
+    '4': '5'
+    '5': '0'
+    '6': '2'
+    '7': '7'
+    '8': '3'
+name: bekvam_3017
+options:
+- raw:
+  - - '1'
+    - '7'
+- raw:
+  - - '8'
+    - '7'
+- raw:
+  - - '0'
+    - '7'
+- raw:
+  - - '2'
+    - '7'
+question_category: mating
+template_type: find_edges
+video_id: 4QA9SYic4aE

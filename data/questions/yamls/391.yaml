@@ -1,0 +1,26 @@
+category: Chair
+name: poang_2
+video_id: jriFVMF4yB0
+frame_idx: [9, 107]
+question_category: tracking
+template_type: track_multi
+options:
+- raw: [['1', '2'], ['2', '7'], ['7', '8']]
+- raw: [['1', '1'], ['2', '2'], ['7', '7']]
+- raw: [['1', '1'], ['2', '8'], ['7', '7']]
+- raw: [['1', '7'], ['2', '2'], ['7', '8']]
+correct_option:
+  raw: [['1', '2'], ['2', '7'], ['7', '8']]
+  idx: 0
+jumble_map:
+  '5': '6'
+  '6': '5'
+  '0': '0'
+  '10': '9'
+  '9': '10'
+  '3': '4'
+  '4': '3'
+  '1': '2'
+  '2': '7'
+  '7': '8'
+  '8': '1'

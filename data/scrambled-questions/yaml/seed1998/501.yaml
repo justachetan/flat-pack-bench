@@ -1,0 +1,29 @@
+category: Table
+correct_option:
+  idx:
+  - 1
+  - 2
+  raw:
+  - '4'
+  - '5'
+frame_idx: 53
+metadata:
+  part_id_mapping:
+    '0': '1'
+    '1': '2'
+    '2': '7'
+    '3': '0'
+    '4': '5'
+    '5': '4'
+    '6': '3'
+    '7': '6'
+name: satsumas
+options:
+- raw: '3'
+- raw: '4'
+- raw: '5'
+question_category: mating
+question_params:
+  query_part: '0'
+template_type: 1part
+video_id: CdpuSW0zEAk

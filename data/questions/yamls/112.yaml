@@ -1,0 +1,21 @@
+category: Chair
+name: teodores
+video_id: BSFWyGZr0QU
+frame_idx: [11, 74]
+question_category: tracking
+template_type: track_single
+question_params:
+  query_part: '0'
+options:
+- raw: '4'
+- raw: '0'
+- raw: '2'
+- raw: '8'
+correct_option:
+  raw: '4'
+  idx: 0
+jumble_map:
+  '0': '4'
+  '4': '0'
+  '2': '2'
+  '8': '8'

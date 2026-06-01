@@ -1,0 +1,27 @@
+category: Chair
+name: stig
+video_id: _Fvk35D0kgM
+frame_idx: [6, 81]
+question_category: tracking
+template_type: track_single
+question_params:
+  query_part: '6'
+options:
+- raw: '0'
+- raw: '5'
+- raw: '6'
+- raw: '2'
+correct_option:
+  raw: '0'
+  idx: 0
+jumble_map:
+  '1': '2'
+  '2': '1'
+  '8': '9'
+  '9': '8'
+  '3': '4'
+  '4': '3'
+  '0': '5'
+  '5': '6'
+  '6': '0'
+  '7': '7'

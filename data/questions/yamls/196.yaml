@@ -1,0 +1,14 @@
+category: Misc
+name: satsumas_2
+video_id: Mznn3UeAV24
+frame_idx: 303
+question_category: temporal_ord
+template_type: edge_order
+options:
+- raw: [['8', '0'], ['3', '7'], ['4', '7'], ['8', '3']]
+- raw: [['7', '0'], ['8', '3'], ['4', '7'], ['7', '3']]
+- raw: [['8', '0'], ['3', '7'], ['8', '3'], ['4', '7']]
+- raw: [['8', '0'], ['8', '3'], ['3', '7'], ['4', '7']]
+correct_option:
+  raw: [['8', '0'], ['3', '7'], ['4', '7'], ['8', '3']]
+  idx: 0

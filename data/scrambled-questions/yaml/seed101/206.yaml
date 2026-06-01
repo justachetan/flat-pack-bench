@@ -1,0 +1,64 @@
+category: Chair
+correct_option:
+  idx: 1
+  raw:
+  - - '0'
+    - '1'
+  - - '7'
+    - '1'
+  - - '0'
+    - '4'
+  - - '0'
+    - '3'
+frame_idx: 1890
+metadata:
+  part_id_mapping:
+    '0': '1'
+    '1': '4'
+    '2': '5'
+    '3': '0'
+    '4': '7'
+    '5': '2'
+    '6': '3'
+    '7': '6'
+name: ronninge
+options:
+- raw:
+  - - '0'
+    - '4'
+  - - '7'
+    - '1'
+  - - '0'
+    - '1'
+  - - '0'
+    - '3'
+- raw:
+  - - '0'
+    - '1'
+  - - '7'
+    - '1'
+  - - '0'
+    - '4'
+  - - '0'
+    - '3'
+- raw:
+  - - '0'
+    - '1'
+  - - '7'
+    - '1'
+  - - '0'
+    - '3'
+  - - '0'
+    - '4'
+- raw:
+  - - '0'
+    - '1'
+  - - '0'
+    - '4'
+  - - '7'
+    - '1'
+  - - '0'
+    - '3'
+question_category: temporal_ord
+template_type: edge_order
+video_id: d9sENgGhBk4

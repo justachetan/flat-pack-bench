@@ -1,0 +1,21 @@
+category: Chair
+name: bekvam_3017
+video_id: 4QA9SYic4aE
+frame_idx: [10, 169]
+question_category: tracking
+template_type: track_single
+question_params:
+  query_part: '2'
+options:
+- raw: '2'
+- raw: '6'
+- raw: '5'
+- raw: '3'
+correct_option:
+  raw: '3'
+  idx: 3
+jumble_map:
+  '2': '3'
+  '3': '5'
+  '5': '6'
+  '6': '2'

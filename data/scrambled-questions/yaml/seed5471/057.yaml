@@ -1,0 +1,63 @@
+category: Misc
+correct_option:
+  idx: 1
+  raw:
+  - - '8'
+    - '9'
+  - - '9'
+    - '6'
+  - - '6'
+    - '8'
+frame_idx:
+- 0
+- 105
+jumble_map:
+- '8': '9'
+- '9': '6'
+- '6': '8'
+metadata:
+  part_id_mapping:
+    '0': '8'
+    '1': '9'
+    '10': '4'
+    '2': '6'
+    '3': '1'
+    '4': '7'
+    '5': '5'
+    '6': '0'
+    '7': '10'
+    '8': '2'
+    '9': '3'
+name: vesken
+options:
+- raw:
+  - - '8'
+    - '6'
+  - - '9'
+    - '8'
+  - - '6'
+    - '9'
+- raw:
+  - - '8'
+    - '9'
+  - - '9'
+    - '6'
+  - - '6'
+    - '8'
+- raw:
+  - - '8'
+    - '8'
+  - - '9'
+    - '9'
+  - - '6'
+    - '6'
+- raw:
+  - - '8'
+    - '6'
+  - - '9'
+    - '9'
+  - - '6'
+    - '8'
+question_category: tracking
+template_type: track_multi
+video_id: ZyPg4wfBCcs

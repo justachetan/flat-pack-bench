@@ -1,0 +1,28 @@
+category: Table
+correct_option:
+  idx: 0
+  raw: '2'
+frame_idx:
+- 5
+- 20
+jumble_map:
+  '0': '0'
+  '1': '1'
+  '2': '2'
+  '3': '3'
+metadata:
+  part_id_mapping:
+    '0': '2'
+    '1': '3'
+    '2': '0'
+    '3': '1'
+name: gladom
+options:
+- raw: '2'
+- raw: '1'
+- raw: '3'
+question_category: tracking
+question_params:
+  query_part: '2'
+template_type: track_single
+video_id: swf3wH3ApfU

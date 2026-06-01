@@ -1,0 +1,33 @@
+category: Misc
+correct_option:
+  idx: 2
+  raw:
+  - '5'
+  - '8'
+frame_idx: 95
+metadata:
+  part_id_mapping:
+    '0': '9'
+    '1': '0'
+    '2': '4'
+    '3': '1'
+    '4': '5'
+    '5': '7'
+    '6': '8'
+    '7': '6'
+    '8': '3'
+    '9': '2'
+name: satsumas_2
+options:
+- raw:
+  - '5'
+  - '2'
+- raw:
+  - '5'
+  - '3'
+- raw:
+  - '5'
+  - '8'
+question_category: mating
+template_type: find_edges
+video_id: D3kQDzdDwfA

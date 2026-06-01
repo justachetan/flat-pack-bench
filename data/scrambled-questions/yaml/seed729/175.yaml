@@ -1,0 +1,27 @@
+category: Chair
+correct_option:
+  idx: 0
+  raw: '7'
+frame_idx: 152
+metadata:
+  part_id_mapping:
+    '0': '8'
+    '1': '9'
+    '10': '3'
+    '2': '0'
+    '3': '5'
+    '4': '7'
+    '5': '2'
+    '6': '4'
+    '7': '1'
+    '8': '6'
+    '9': '10'
+name: poang_2
+options:
+- raw: '7'
+- raw: '2'
+- raw: '4'
+- raw: '5'
+question_category: temporal_loc
+template_type: latest_change
+video_id: gdAsGoMxDag

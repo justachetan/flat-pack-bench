@@ -1,0 +1,41 @@
+category: Table
+correct_option:
+  idx: 2
+  raw: '7'
+frame_idx:
+- 130
+- 208
+jumble_map:
+  '0': '7'
+  '11': '9'
+  '2': '5'
+  '5': '2'
+  '6': '11'
+  '7': '8'
+  '8': '0'
+  '9': '6'
+metadata:
+  part_id_mapping:
+    '0': '8'
+    '1': '7'
+    '10': '6'
+    '11': '11'
+    '2': '3'
+    '3': '0'
+    '4': '10'
+    '5': '2'
+    '6': '1'
+    '7': '5'
+    '8': '4'
+    '9': '9'
+name: tornviken
+options:
+- raw: '2'
+- raw: '5'
+- raw: '7'
+- raw: '0'
+question_category: tracking
+question_params:
+  query_part: '0'
+template_type: track_single
+video_id: 2PBXoPSeV5E

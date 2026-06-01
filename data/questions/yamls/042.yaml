@@ -1,0 +1,13 @@
+category: Chair
+name: applaro
+video_id: S3bH_dNQ4Mw
+frame_idx: 0
+question_category: "mating"
+template_type: "find_edges"
+options:
+  - "raw": ["2", "1"]
+  - "raw": ["2", "4"]
+  - "raw": ["2", "0"]
+correct_option:
+  "raw": [["2", "4"], ["2", "0"]]
+  "idx": [1, 2]

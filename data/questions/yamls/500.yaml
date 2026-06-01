@@ -1,0 +1,16 @@
+category: Table
+name: satsumas
+video_id: CdpuSW0zEAk
+frame_idx: 36
+question_category: mating
+template_type: 1part
+question_params:
+  query_part: '3'
+options:
+- raw: '6'
+- raw: '4'
+- raw: '7'
+- raw: '0'
+correct_option:
+  raw: '4'
+  idx: 1

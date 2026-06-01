@@ -1,0 +1,23 @@
+category: Chair
+correct_option:
+  idx: 2
+  raw: '0'
+frame_idx: 82
+metadata:
+  part_id_mapping:
+    '0': '7'
+    '1': '8'
+    '2': '3'
+    '3': '0'
+    '4': '2'
+    '7': '4'
+    '8': '1'
+name: teodores
+options:
+- raw: '7'
+- raw: '8'
+- raw: '0'
+- raw: '3'
+question_category: temporal_loc
+template_type: latest_change
+video_id: 9uMjr9AL7Hk

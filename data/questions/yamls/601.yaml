@@ -1,0 +1,14 @@
+category: Misc
+name: vesken
+video_id: RHNPcRZVpRI
+frame_idx: 17
+question_category: temporal_loc
+template_type: latest_change
+options:
+- raw: '7'
+- raw: '8'
+- raw: '9'
+- raw: '10'
+correct_option:
+  raw: '9'
+  idx: 2

@@ -1,0 +1,16 @@
+category: Chair
+name: poang_2
+video_id: jriFVMF4yB0
+frame_idx: 23
+question_category: temporal_ord
+template_type: many_part_order
+question_params:
+  query_part: '10'
+options:
+- raw: ['7', '1', '2', '8']
+- raw: ['1', '7', '2', '8']
+- raw: ['1', '2', '7', '8']
+- raw: ['7', '2', '1', '8']
+correct_option:
+  raw: ['7', '1', '2', '8']
+  idx: 0

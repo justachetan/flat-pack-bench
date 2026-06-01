@@ -1,0 +1,24 @@
+category: Table
+correct_option:
+  idx: 1
+  raw: '4'
+frame_idx: 36
+metadata:
+  part_id_mapping:
+    '0': '0'
+    '1': '5'
+    '2': '3'
+    '3': '6'
+    '4': '7'
+    '5': '4'
+    '6': '2'
+    '7': '1'
+name: satsumas
+options:
+- raw: '7'
+- raw: '4'
+- raw: '2'
+- raw: '1'
+question_category: temporal_loc
+template_type: latest_change
+video_id: CdpuSW0zEAk

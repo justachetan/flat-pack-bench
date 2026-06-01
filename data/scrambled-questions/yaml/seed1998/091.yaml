@@ -1,0 +1,34 @@
+category: Misc
+correct_option:
+  idx: 2
+  raw: '6'
+frame_idx:
+- 0
+- 22
+jumble_map:
+- '4': '5'
+- '0': '6'
+- '2': '1'
+- '5': '4'
+- '1': '2'
+- '6': '0'
+metadata:
+  part_id_mapping:
+    '0': '4'
+    '1': '0'
+    '2': '2'
+    '4': '5'
+    '5': '1'
+    '6': '6'
+name: vittsjo_2
+options:
+- raw: '2'
+- raw: '1'
+- raw: '6'
+- raw: '0'
+question_category: tracking
+question_params:
+  query_part:
+  - '0'
+template_type: track_single
+video_id: MsbHf4RuvF8

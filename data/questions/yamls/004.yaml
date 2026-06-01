@@ -1,0 +1,15 @@
+category: Chair
+name: ronninge
+video_id: d9sENgGhBk4
+frame_idx: 0
+question_category: "temporal_ord"
+template_type: "edge_order"
+options:
+  - "raw": [["2", "3"], ["0", "3"], ["7", "3"], ["5", "3"]]
+  - "raw": [["2","3"], ["2", "4"], ["3", "0"], ["7", "3"]]
+  - "raw": [["0", "3"], ["2", "3"], ["5", "3"], ["7", "3"]]
+  - "raw": [["0", "3"], ["2", "3"], ["7", "3"], ["5", "3"]]
+correct_option:
+  "raw": [["2", "3"], ["0", "3"], ["7", "3"], ["5", "3"]]
+  "idx": 0 # 0-indexed
+

@@ -1,0 +1,68 @@
+category: Chair
+correct_option:
+  idx: 2
+  raw:
+  - - '4'
+    - '3'
+  - - '0'
+    - '1'
+  - - '3'
+    - '0'
+  - - '1'
+    - '4'
+frame_idx:
+- 0
+- 20
+jumble_map:
+  '0': '1'
+  '1': '4'
+  '3': '0'
+  '4': '3'
+metadata:
+  part_id_mapping:
+    '0': '2'
+    '1': '4'
+    '2': '0'
+    '3': '3'
+    '4': '1'
+name: mammut_2
+options:
+- raw:
+  - - '4'
+    - '4'
+  - - '0'
+    - '0'
+  - - '3'
+    - '3'
+  - - '1'
+    - '1'
+- raw:
+  - - '4'
+    - '0'
+  - - '0'
+    - '3'
+  - - '3'
+    - '1'
+  - - '1'
+    - '4'
+- raw:
+  - - '4'
+    - '3'
+  - - '0'
+    - '1'
+  - - '3'
+    - '0'
+  - - '1'
+    - '4'
+- raw:
+  - - '4'
+    - '3'
+  - - '0'
+    - '4'
+  - - '3'
+    - '1'
+  - - '1'
+    - '0'
+question_category: tracking
+template_type: track_multi
+video_id: mnIOdgULIws

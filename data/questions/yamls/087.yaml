@@ -1,0 +1,15 @@
+category: Chair
+name: teodores
+video_id: y8cs8MC9x2k
+frame_idx: 0
+question_category: "mating"
+template_type: "2parts"
+question_params:
+  query_part1: "0"
+  query_part2: "1"
+options:
+  - "raw": "Yes"
+  - "raw": "No"
+correct_option:
+  "raw": "Yes"
+  "idx": 0

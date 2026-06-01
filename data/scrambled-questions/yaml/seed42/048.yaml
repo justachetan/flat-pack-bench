@@ -1,0 +1,24 @@
+category: Chair
+correct_option:
+  idx: 1
+  raw: '5'
+frame_idx: 1890
+metadata:
+  part_id_mapping:
+    '0': '7'
+    '1': '0'
+    '2': '2'
+    '3': '1'
+    '4': '3'
+    '5': '4'
+    '6': '5'
+    '7': '6'
+name: ronninge
+options:
+- raw: '0'
+- raw: '5'
+- raw: '1'
+- raw: '7'
+question_category: temporal_loc
+template_type: latest_change
+video_id: d9sENgGhBk4

@@ -1,0 +1,13 @@
+category: Chair
+name: vedbo
+video_id: NdkuJ9cwOuE
+frame_idx: 0
+question_category: temporal_loc
+template_type: next_change
+options:
+- raw: '2'
+- raw: '1'
+- raw: '3'
+correct_option:
+  raw: '1'
+  idx: 1

@@ -1,0 +1,65 @@
+category: Misc
+correct_option:
+  idx: 2
+  raw:
+  - - '3'
+    - '8'
+  - - '8'
+    - '0'
+  - - '0'
+    - '3'
+frame_idx:
+- 303
+- 0
+jumble_map:
+- '4': '2'
+- '9': '4'
+- '2': '9'
+- '3': '8'
+- '8': '0'
+- '0': '3'
+metadata:
+  part_id_mapping:
+    '0': '4'
+    '1': '9'
+    '2': '2'
+    '3': '1'
+    '4': '5'
+    '5': '7'
+    '6': '3'
+    '7': '8'
+    '8': '0'
+    '9': '6'
+name: satsumas_2
+options:
+- raw:
+  - - '3'
+    - '3'
+  - - '8'
+    - '8'
+  - - '0'
+    - '0'
+- raw:
+  - - '3'
+    - '8'
+  - - '8'
+    - '3'
+  - - '0'
+    - '8'
+- raw:
+  - - '3'
+    - '8'
+  - - '8'
+    - '0'
+  - - '0'
+    - '3'
+- raw:
+  - - '3'
+    - '0'
+  - - '8'
+    - '3'
+  - - '0'
+    - '8'
+question_category: tracking
+template_type: track_multi
+video_id: Mznn3UeAV24

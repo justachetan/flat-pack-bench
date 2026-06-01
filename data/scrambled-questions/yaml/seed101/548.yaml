@@ -1,0 +1,31 @@
+category: Chair
+correct_option:
+  idx: 0
+  raw: '1'
+frame_idx:
+- 43
+- 61
+jumble_map:
+  '0': '1'
+  '1': '0'
+  '2': '4'
+  '3': '3'
+  '4': '2'
+metadata:
+  part_id_mapping:
+    '0': '1'
+    '1': '0'
+    '2': '2'
+    '3': '3'
+    '4': '4'
+name: ingolf
+options:
+- raw: '1'
+- raw: '0'
+- raw: '2'
+- raw: '4'
+question_category: tracking
+question_params:
+  query_part: '0'
+template_type: track_single
+video_id: r_PoGW0Mft0

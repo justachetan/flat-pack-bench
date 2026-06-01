@@ -1,0 +1,28 @@
+category: Table
+correct_option:
+  idx: 3
+  raw: '9'
+frame_idx: 69
+metadata:
+  part_id_mapping:
+    '0': '11'
+    '1': '1'
+    '10': '9'
+    '11': '5'
+    '2': '4'
+    '3': '7'
+    '4': '8'
+    '5': '3'
+    '6': '2'
+    '7': '0'
+    '8': '10'
+    '9': '6'
+name: tornviken
+options:
+- raw: '3'
+- raw: '1'
+- raw: '7'
+- raw: '9'
+question_category: temporal_loc
+template_type: latest_change
+video_id: 2PBXoPSeV5E

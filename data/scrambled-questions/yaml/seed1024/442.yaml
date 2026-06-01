@@ -1,0 +1,32 @@
+category: Bench
+correct_option:
+  idx: 1
+  raw:
+  - - '6'
+    - '5'
+frame_idx: 10
+metadata:
+  part_id_mapping:
+    '0': '1'
+    '1': '6'
+    '4': '4'
+    '5': '7'
+    '6': '5'
+    '7': '0'
+name: tjusig
+options:
+- raw:
+  - - '6'
+    - '0'
+- raw:
+  - - '6'
+    - '5'
+- raw:
+  - - '6'
+    - '1'
+- raw:
+  - - '4'
+    - '7'
+question_category: mating
+template_type: find_edges
+video_id: 9tGOUGtUapo

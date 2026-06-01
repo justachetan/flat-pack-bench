@@ -1,0 +1,55 @@
+category: Chair
+correct_option:
+  idx: 0
+  raw:
+  - - '2'
+    - '1'
+  - - '1'
+    - '2'
+  - - '0'
+    - '0'
+frame_idx:
+- 0
+- 132
+jumble_map:
+  '0': '0'
+  '1': '2'
+  '2': '1'
+metadata:
+  part_id_mapping:
+    '0': '2'
+    '1': '1'
+    '2': '0'
+name: marius
+options:
+- raw:
+  - - '2'
+    - '1'
+  - - '1'
+    - '2'
+  - - '0'
+    - '0'
+- raw:
+  - - '2'
+    - '2'
+  - - '1'
+    - '1'
+  - - '0'
+    - '0'
+- raw:
+  - - '2'
+    - '0'
+  - - '0'
+    - '1'
+  - - '1'
+    - '2'
+- raw:
+  - - '2'
+    - '1'
+  - - '1'
+    - '0'
+  - - '0'
+    - '2'
+question_category: tracking
+template_type: track_multi
+video_id: lob23rRie-w

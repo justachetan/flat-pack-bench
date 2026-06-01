@@ -1,0 +1,25 @@
+category: Misc
+name: satsumas_2
+video_id: 6kyW3P6x6O8
+frame_idx: [72, 249]
+question_category: tracking
+template_type: track_multi
+options:
+- raw: [['3', '3'], ['4', '4'], ['5', '5']]
+- raw: [['3', '4'], ['4', '5'], ['5', '3']]
+- raw: [['3', '5'], ['4', '3'], ['5', '4']]
+- raw: [['3', '4'], ['4', '3'], ['5', '5']]
+correct_option:
+  raw: [['3', '5'], ['4', '3'], ['5', '4']]
+  idx: 2
+jumble_map:
+  '0': '1'
+  '1': '2'
+  '7': '8'
+  '8': '7'
+  '3': '5'
+  '4': '3'
+  '5': '4'
+  '2': '0'
+  '6': '9'
+  '9': '6'

@@ -1,0 +1,32 @@
+category: Chair
+correct_option:
+  idx:
+  - 0
+  - 1
+  raw:
+  - - - '2'
+      - '0'
+  - - - '2'
+      - '3'
+frame_idx: 0
+metadata:
+  part_id_mapping:
+    '0': '2'
+    '1': '1'
+    '2': '0'
+    '3': '3'
+    '4': '4'
+name: vedbo
+options:
+- raw:
+  - - '2'
+    - '0'
+- raw:
+  - - '2'
+    - '3'
+- raw:
+  - - '0'
+    - '3'
+question_category: mating
+template_type: find_edges
+video_id: UUEBbyiiK1U

@@ -1,0 +1,57 @@
+category: Chair
+correct_option:
+  idx: 0
+  raw:
+  - - '10'
+    - '4'
+  - - '10'
+    - '1'
+  - - '7'
+    - '9'
+frame_idx: 57
+metadata:
+  part_id_mapping:
+    '0': '6'
+    '1': '5'
+    '10': '10'
+    '2': '1'
+    '3': '3'
+    '4': '0'
+    '5': '8'
+    '6': '2'
+    '7': '4'
+    '8': '9'
+    '9': '7'
+name: poang_2
+options:
+- raw:
+  - - '10'
+    - '4'
+  - - '10'
+    - '1'
+  - - '7'
+    - '9'
+- raw:
+  - - '10'
+    - '1'
+  - - '10'
+    - '4'
+  - - '7'
+    - '9'
+- raw:
+  - - '7'
+    - '4'
+  - - '7'
+    - '1'
+  - - '10'
+    - '9'
+- raw:
+  - - '7'
+    - '1'
+  - - '7'
+    - '4'
+  - - '10'
+    - '9'
+question_category: temporal_ord
+template_type: edge_order
+video_id: jriFVMF4yB0

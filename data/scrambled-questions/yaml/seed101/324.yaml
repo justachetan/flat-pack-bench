@@ -1,0 +1,26 @@
+category: Chair
+correct_option:
+  idx: 1
+  raw: '5'
+frame_idx: 19
+metadata:
+  part_id_mapping:
+    '0': '7'
+    '1': '5'
+    '2': '8'
+    '3': '0'
+    '4': '3'
+    '5': '6'
+    '6': '4'
+    '7': '9'
+    '8': '2'
+    '9': '1'
+name: stig
+options:
+- raw: '7'
+- raw: '5'
+- raw: '2'
+- raw: '1'
+question_category: temporal_loc
+template_type: next_change
+video_id: _Fvk35D0kgM

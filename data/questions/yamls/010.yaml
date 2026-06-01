@@ -1,0 +1,15 @@
+category: Chair
+name: nordviken
+video_id: P_QFo8h1SX8
+frame_idx: 32
+question_category: "temporal_ord"
+template_type: "edge_order"
+options:
+  - "raw": [["1", "0"], ["0", "4"], ["0", "6"], ["2", "6"]]
+  - "raw": [["0", "4"], ["0", "1"], ["0", "5"], ["0", "2"]]
+  - "raw": [["1", "0"], ["0", "4"], ["0", "5"], ["2", "0"]]
+  - "raw": [["0", "1"], ["0", "4"], ["0", "2"], ["0", "5"]]
+correct_option:
+  "raw": [["1", "0"], ["0", "4"], ["0", "5"], ["2", "0"]]
+  "idx": 2 # 0-indexed
+

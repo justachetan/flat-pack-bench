@@ -1,0 +1,13 @@
+category: Misc
+name: satsumas_2
+video_id: D3kQDzdDwfA
+frame_idx: 95
+question_category: "mating"
+template_type: "find_edges"
+options:
+  - "raw": ["8", "1"]
+  - "raw": ["8", "0"]
+  - "raw": ["8", "2"]
+correct_option:
+  "raw": ["8", "0"]
+  "idx": 1

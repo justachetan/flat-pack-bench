@@ -1,0 +1,14 @@
+category: Chair
+name: teodores
+video_id: 9uMjr9AL7Hk
+frame_idx: 1
+question_category: mating
+template_type: find_edges
+options:
+- raw: [['0', '2']]
+- raw: [['1', '4']]
+- raw: [['0', '1']]
+- raw: [['1', '2']]
+correct_option:
+  raw: [['0', '1']]
+  idx: 2

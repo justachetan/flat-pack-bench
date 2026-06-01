@@ -1,0 +1,22 @@
+category: Chair
+correct_option:
+  idx: 1
+  raw: '2'
+frame_idx: 286
+metadata:
+  part_id_mapping:
+    '0': '4'
+    '1': '0'
+    '2': '2'
+    '3': '1'
+    '4': '3'
+name: vedbo
+options:
+- raw: '0'
+- raw: '2'
+- raw: '1'
+question_category: temporal_loc
+question_params:
+  query_part: '4'
+template_type: 1part_order_last
+video_id: UUEBbyiiK1U

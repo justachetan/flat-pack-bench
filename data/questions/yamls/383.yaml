@@ -1,0 +1,28 @@
+category: Chair
+name: poang_2
+video_id: jriFVMF4yB0
+frame_idx: [9, 28]
+question_category: tracking
+template_type: track_single
+question_params:
+  query_part: '7'
+options:
+- raw: '1'
+- raw: '7'
+- raw: '2'
+- raw: '8'
+correct_option:
+  raw: '8'
+  idx: 3
+jumble_map:
+  '5': '6'
+  '6': '5'
+  '0': '0'
+  '10': '9'
+  '9': '10'
+  '3': '4'
+  '4': '3'
+  '1': '2'
+  '2': '7'
+  '7': '8'
+  '8': '1'

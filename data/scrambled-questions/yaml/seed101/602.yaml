@@ -1,0 +1,48 @@
+category: Misc
+correct_option:
+  idx: 0
+  raw:
+  - '8'
+  - '9'
+  - '3'
+  - '5'
+frame_idx: 32
+metadata:
+  part_id_mapping:
+    '0': '4'
+    '10': '6'
+    '2': '0'
+    '3': '3'
+    '4': '5'
+    '5': '9'
+    '6': '8'
+    '7': '7'
+    '8': '2'
+    '9': '10'
+name: vesken
+options:
+- raw:
+  - '8'
+  - '9'
+  - '3'
+  - '5'
+- raw:
+  - '8'
+  - '9'
+  - '5'
+  - '3'
+- raw:
+  - '3'
+  - '5'
+  - '9'
+  - '8'
+- raw:
+  - '5'
+  - '3'
+  - '9'
+  - '8'
+question_category: temporal_ord
+question_params:
+  query_part: '4'
+template_type: many_part_order
+video_id: RHNPcRZVpRI

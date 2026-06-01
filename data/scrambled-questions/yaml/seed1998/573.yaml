@@ -1,0 +1,24 @@
+category: Chair
+correct_option:
+  idx: 0
+  raw: 'yes'
+frame_idx: 1
+metadata:
+  part_id_mapping:
+    '0': '4'
+    '2': '5'
+    '3': '6'
+    '4': '3'
+    '5': '0'
+    '6': '7'
+    '7': '2'
+name: bekvam_3017
+options:
+- raw: 'yes'
+- raw: 'no'
+question_category: mating
+question_params:
+  query_part1: '5'
+  query_part2: '2'
+template_type: 2parts
+video_id: yL9VPiHVYtI

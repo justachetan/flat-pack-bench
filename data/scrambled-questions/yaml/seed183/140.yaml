@@ -1,0 +1,36 @@
+category: Chair
+correct_option:
+  idx: 0
+  raw: '4'
+frame_idx:
+- 1910
+- 183
+jumble_map:
+  '2': '7'
+  '3': '5'
+  '4': '6'
+  '5': '3'
+  '6': '4'
+  '7': '9'
+  '9': '2'
+metadata:
+  part_id_mapping:
+    '0': '2'
+    '1': '5'
+    '2': '3'
+    '3': '6'
+    '4': '4'
+    '5': '9'
+    '6': '7'
+    '7': '1'
+    '9': '0'
+name: stig
+options:
+- raw: '4'
+- raw: '6'
+- raw: '9'
+question_category: tracking
+question_params:
+  query_part: '6'
+template_type: track_single
+video_id: YqWk45Sawt4

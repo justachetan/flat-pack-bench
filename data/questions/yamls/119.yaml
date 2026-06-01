@@ -1,0 +1,23 @@
+category: Chair
+name: mammut_1
+video_id: iDuPvSeAHG8
+frame_idx: [0, 35]
+question_category: tracking
+template_type: track_single
+question_params:
+  query_part: '3'
+options:
+- raw: '2'
+- raw: '3'
+- raw: '4'
+- raw: '5'
+correct_option:
+  raw: '4'
+  idx: 2
+jumble_map:
+  '0': '0'
+  '1': '1'
+  '2': '3'
+  '3': '4'
+  '4': '5'
+  '5': '2'

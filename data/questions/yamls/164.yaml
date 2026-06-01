@@ -1,0 +1,27 @@
+category: Chair
+name: poang_2
+video_id: gdAsGoMxDag
+frame_idx: [152, 224]
+question_category: tracking
+template_type: track_single
+question_params:
+  query_part: '6'
+options:
+- raw: '5'
+- raw: '9'
+- raw: '6'
+- raw: '7'
+correct_option:
+  raw: '5'
+  idx: 0
+jumble_map:
+  '5': '6'
+  '6': '5'
+  '0': '0'
+  '2': '8'
+  '8': '7'
+  '7': '2'
+  '3': '4'
+  '4': '3'
+  '10': '9'
+  '9': '10'

@@ -1,0 +1,18 @@
+category: Chair
+name: marius
+video_id: lob23rRie-w
+frame_idx: [0, 132]
+question_category: tracking
+template_type: track_multi
+options:
+- raw: [['0', '1'], ['1', '0'], ['2', '2']]
+- raw: [['0', '0'], ['1', '1'], ['2', '2']]
+- raw: [['0', '2'], ['2', '1'], ['1', '0']]
+- raw: [['0', '1'], ['1', '2'], ['2', '0']]
+correct_option:
+  raw: [['0', '1'], ['1', '0'], ['2', '2']]
+  idx: 0
+jumble_map:
+  '0': '1'
+  '1': '0'
+  '2': '2'

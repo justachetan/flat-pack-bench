@@ -1,0 +1,45 @@
+category: Chair
+correct_option:
+  idx: 1
+  raw:
+  - '3'
+  - '7'
+  - '2'
+  - '4'
+frame_idx: 82
+metadata:
+  part_id_mapping:
+    '0': '8'
+    '1': '1'
+    '2': '3'
+    '3': '7'
+    '4': '0'
+    '7': '4'
+    '8': '2'
+name: teodores
+options:
+- raw:
+  - '7'
+  - '3'
+  - '4'
+  - '2'
+- raw:
+  - '3'
+  - '7'
+  - '2'
+  - '4'
+- raw:
+  - '3'
+  - '7'
+  - '4'
+  - '2'
+- raw:
+  - '3'
+  - '4'
+  - '2'
+  - '7'
+question_category: temporal_ord
+question_params:
+  query_part: '0'
+template_type: many_part_order
+video_id: 9uMjr9AL7Hk

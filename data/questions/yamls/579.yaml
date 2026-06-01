@@ -1,0 +1,19 @@
+category: Chair
+name: bekvam_3017
+video_id: yL9VPiHVYtI
+frame_idx: [26, 25]
+question_category: tracking
+template_type: track_multi
+options:
+- raw: [['2', '5'], ['3', '2']]
+- raw: [['2', '3'], ['3', '2']]
+- raw: [['2', '6'], ['3', '3']]
+- raw: [['2', '5'], ['3', '6']]
+correct_option:
+  raw: [['2', '5'], ['3', '2']]
+  idx: 0
+jumble_map:
+  '2': '5'
+  '5': '6'
+  '6': '3'
+  '3': '2'

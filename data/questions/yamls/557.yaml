@@ -1,0 +1,20 @@
+category: Chair
+name: ingolf
+video_id: r_PoGW0Mft0
+frame_idx: [43, 65]
+question_category: tracking
+template_type: track_multi
+options:
+- raw: [['1', '0'], ['0', '1'], ['4', '2']]
+- raw: [['0', '0'], ['1', '1'], ['4', '2']]
+- raw: [['0', '1'], ['1', '0'], ['4', '4']]
+- raw: [['0', '0'], ['1', '1'], ['4', '4']]
+correct_option:
+  raw: [['1', '0'], ['0', '1'], ['4', '2']]
+  idx: 0
+jumble_map:
+  '0': '1'
+  '1': '0'
+  '2': '4'
+  '4': '2'
+  '3': '3'

@@ -1,0 +1,14 @@
+category: Shelf
+name: laiva
+video_id: 28FOnQ-9yy8
+frame_idx: 334
+question_category: temporal_loc
+template_type: latest_change
+options:
+- raw: '10'
+- raw: '3'
+- raw: '6'
+- raw: '2'
+correct_option:
+  raw: '2'
+  idx: 3

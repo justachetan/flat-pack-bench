@@ -1,0 +1,25 @@
+category: Chair
+correct_option:
+  idx: 2
+  raw: '6'
+frame_idx: 33
+metadata:
+  part_id_mapping:
+    '0': '4'
+    '1': '0'
+    '2': '2'
+    '3': '3'
+    '4': '6'
+    '5': '5'
+    '6': '1'
+name: nordviken
+options:
+- raw: '5'
+- raw: '2'
+- raw: '6'
+question_category: temporal_loc
+question_params:
+  query_part:
+  - '4'
+template_type: 1part_order
+video_id: P_QFo8h1SX8

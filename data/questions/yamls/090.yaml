@@ -1,0 +1,15 @@
+category: Table
+name: gladom
+video_id: U07JUw3m8_k
+frame_idx: 0
+question_category: "temporal_ord"
+template_type: "edge_order"
+options:
+  - "raw": [["0", "3"], ["1", "2"], ["2", "3"]]
+  - "raw": [["0", "3"], ["0", "2"], ["1", "2"]]
+  - "raw": [["2", "3"], ["0", "3"], ["1", "2"]]
+  - "raw": [["1", "2"], ["0", "2"], ["0", "3"]]
+correct_option:
+  "raw": [["0", "3"], ["0", "2"], ["1", "2"]]
+  "idx": 1 # 0-indexed
+

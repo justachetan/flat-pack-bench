@@ -1,0 +1,64 @@
+category: Chair
+correct_option:
+  idx: 0
+  raw:
+  - - '1'
+    - '8'
+  - - '8'
+    - '1'
+  - - '4'
+    - '0'
+frame_idx:
+- 0
+- 24
+jumble_map:
+  '0': '4'
+  '1': '8'
+  '2': '9'
+  '4': '0'
+  '8': '1'
+  '9': '2'
+metadata:
+  part_id_mapping:
+    '0': '7'
+    '1': '9'
+    '10': '4'
+    '2': '1'
+    '4': '10'
+    '5': '5'
+    '7': '8'
+    '8': '2'
+    '9': '0'
+name: poang_2
+options:
+- raw:
+  - - '1'
+    - '8'
+  - - '8'
+    - '1'
+  - - '4'
+    - '0'
+- raw:
+  - - '1'
+    - '1'
+  - - '8'
+    - '8'
+  - - '4'
+    - '0'
+- raw:
+  - - '1'
+    - '8'
+  - - '8'
+    - '1'
+  - - '4'
+    - '4'
+- raw:
+  - - '1'
+    - '1'
+  - - '8'
+    - '8'
+  - - '4'
+    - '4'
+question_category: tracking
+template_type: track_multi
+video_id: MGtP_yDOF8I

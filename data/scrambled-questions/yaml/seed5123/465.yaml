@@ -1,0 +1,25 @@
+category: Chair
+correct_option:
+  idx: 1
+  raw: '8'
+frame_idx: 24
+metadata:
+  part_id_mapping:
+    '0': '4'
+    '1': '0'
+    '10': '1'
+    '2': '9'
+    '4': '7'
+    '5': '10'
+    '7': '2'
+    '8': '5'
+    '9': '8'
+name: poang_2
+options:
+- raw: '1'
+- raw: '8'
+- raw: '2'
+- raw: '5'
+question_category: temporal_loc
+template_type: latest_change
+video_id: MGtP_yDOF8I

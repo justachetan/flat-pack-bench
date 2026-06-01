@@ -1,0 +1,14 @@
+category: Chair
+name: poang_2
+video_id: bMOh9UKnMXI
+frame_idx: 209
+question_category: temporal_ord
+template_type: edge_order
+options:
+- raw: [['10', '7'], ['10', '2'], ['10', '1'], ['10', '0']]
+- raw: [['10', '2'], ['10', '1'], ['10', '7'], ['10', '0']]
+- raw: [['10', '1'], ['10', '7'], ['10', '2'], ['10', '0']]
+- raw: [['10', '7'], ['10', '1'], ['10', '2'], ['10', '0']]
+correct_option:
+  raw: [['10', '7'], ['10', '2'], ['10', '1'], ['10', '0']]
+  idx: 0

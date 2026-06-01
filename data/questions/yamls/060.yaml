@@ -1,0 +1,15 @@
+category: Misc
+name: vesken
+video_id: RSLLplYxmv0
+frame_idx: 83
+question_category: "temporal_loc"
+template_type: "latest_change"
+options:
+  - "raw": "7"
+  - "raw": "8"
+  - "raw": "9"
+  - "raw": "10"
+correct_option:
+  "raw": "7"
+  "idx": 0 # 0-indexed
+

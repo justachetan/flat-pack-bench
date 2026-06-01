@@ -1,0 +1,28 @@
+category: Chair
+correct_option:
+  idx: 1
+  raw: 'no'
+frame_idx: 81
+metadata:
+  part_id_mapping:
+    '0': '6'
+    '1': '4'
+    '10': '7'
+    '2': '9'
+    '3': '2'
+    '4': '1'
+    '5': '5'
+    '6': '8'
+    '7': '3'
+    '8': '10'
+    '9': '0'
+name: poang_2
+options:
+- raw: 'yes'
+- raw: 'no'
+question_category: mating
+question_params:
+  query_part1: '2'
+  query_part2: '6'
+template_type: 2parts
+video_id: jriFVMF4yB0

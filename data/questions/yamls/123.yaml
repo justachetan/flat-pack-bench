@@ -1,0 +1,14 @@
+category: Chair
+name: grubban
+video_id: UyOsfaIK2hA
+frame_idx: 102
+question_category: temporal_loc
+template_type: latest_change
+options:
+- raw: '2'
+- raw: '0'
+- raw: '1'
+- raw: '3'
+correct_option:
+  raw: '2'
+  idx: 0

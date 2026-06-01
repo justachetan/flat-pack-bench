@@ -1,0 +1,56 @@
+category: Misc
+correct_option:
+  idx: 0
+  raw:
+  - - '9'
+    - '8'
+  - - '6'
+    - '5'
+  - - '3'
+    - '2'
+frame_idx: 86
+metadata:
+  part_id_mapping:
+    '0': '6'
+    '1': '9'
+    '2': '3'
+    '3': '1'
+    '4': '7'
+    '5': '4'
+    '6': '8'
+    '7': '0'
+    '8': '5'
+    '9': '2'
+name: satsumas_2
+options:
+- raw:
+  - - '9'
+    - '8'
+  - - '6'
+    - '5'
+  - - '3'
+    - '2'
+- raw:
+  - - '6'
+    - '5'
+  - - '9'
+    - '8'
+  - - '3'
+    - '2'
+- raw:
+  - - '6'
+    - '5'
+  - - '3'
+    - '2'
+  - - '9'
+    - '8'
+- raw:
+  - - '9'
+    - '8'
+  - - '3'
+    - '2'
+  - - '6'
+    - '5'
+question_category: temporal_ord
+template_type: edge_order
+video_id: D3kQDzdDwfA

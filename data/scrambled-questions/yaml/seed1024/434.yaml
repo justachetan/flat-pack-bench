@@ -1,0 +1,22 @@
+category: Bench
+correct_option:
+  idx: 1
+  raw: '5'
+frame_idx: 49
+metadata:
+  part_id_mapping:
+    '0': '1'
+    '1': '6'
+    '4': '4'
+    '5': '7'
+    '6': '5'
+    '7': '0'
+name: tjusig
+options:
+- raw: '4'
+- raw: '5'
+- raw: '0'
+- raw: '6'
+question_category: temporal_loc
+template_type: next_change
+video_id: 9tGOUGtUapo

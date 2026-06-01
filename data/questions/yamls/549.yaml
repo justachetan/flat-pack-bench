@@ -1,0 +1,22 @@
+category: Chair
+name: ingolf
+video_id: r_PoGW0Mft0
+frame_idx: [43, 61]
+question_category: tracking
+template_type: track_single
+question_params:
+  query_part: '4'
+options:
+- raw: '0'
+- raw: '1'
+- raw: '2'
+- raw: '4'
+correct_option:
+  raw: '2'
+  idx: 2
+jumble_map:
+  '0': '1'
+  '1': '0'
+  '2': '4'
+  '4': '2'
+  '3': '3'

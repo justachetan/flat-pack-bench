@@ -1,0 +1,24 @@
+category: Misc
+correct_option:
+  idx: 3
+  raw: '0'
+frame_idx: 14
+metadata:
+  part_id_mapping:
+    '0': '1'
+    '04': '6'
+    '1': '2'
+    '2': '4'
+    '3': '3'
+    '4': '5'
+    '5': '04'
+    '6': '0'
+name: vittsjo_2
+options:
+- raw: '4'
+- raw: '04'
+- raw: '2'
+- raw: '0'
+question_category: temporal_loc
+template_type: latest_change
+video_id: LRsTrDctI9o
