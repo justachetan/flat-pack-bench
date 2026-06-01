@@ -1,0 +1,22 @@
+defaults:
+  - media_pipeline: separate_media_first_pipeline
+  - model: qwen_2_5_vl
+  - _self_
+
+media_cache_dir: "src/eval/results/media_cache/sep_media_first"
+rendered_template_dir: "src/eval/results/rendered_templates/qwen_2_5_vl_sep_media_first"
+responses_dir: "src/eval/results/responses/qwen_2_5_vl_sep_media_first"
+
+video_dir: "data/videos/keyframe-video/fps-1"
+mask_dir: "data/segmentation-masks"
+img_dir: "data/rgb-frames"
+question_dir: "data/questions/yamls"
+
+question_jsonl_fn: null  # if specified, only run inference on this question file
+
+num_shuffles: 1
+override_cache: [] # list of question files to override cache for
+override_templates: False
+only_render_templates: False
+
+seed: 42

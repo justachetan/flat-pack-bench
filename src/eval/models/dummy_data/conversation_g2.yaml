@@ -1,0 +1,48 @@
+- content: src/eval/models/dummy_data/089b763afdc7fc3ef242e3a25a5a98b177c771476a2e4b8eb658750a283e9b64.mp4
+  tag: video
+  type: video
+- content: src/eval/models/dummy_data/726af71fbd8773a2bd273ef60deab23fe9dc30485d61aa67e74fb106dacde503.jpg
+  tag: visual_prompt
+  type: image
+- content: src/eval/models/dummy_data/9fa8c6168c5f381e1e28551a65930d9b183ecbfb5f14ec97b8d37ced4f275eaa.jpg
+  tag: jumbled_visual_prompt
+  type: image
+- content: "You are a furniture-assembly expert. You are given:\n\n1. A video of a\
+    \ furniture assembly in progress.\n2. Two still images, Image A and Image B showing\
+    \ different steps  in the assembly process, with certain parts shaded and labeled.\n\
+    3. A multiple-choice question (with its list of answer options)  that refers to\
+    \ both the video and the image.\n\nYour responsibilities:\n\n- Watch and interpret\
+    \ the assembly steps in the video.\n- Examine the labeled image frames to understand\
+    \ part relationships.  \n- Read the question and all answer choices.\n- Determine\
+    \ the correct option.\n- Reply **only** with a JSON object containing a single\
+    \ key, \"answer\", whose value is the letter of your chosen option (for example\
+    \ \"A\", \"B\", \"C\", etc.).\n\n**No additional text, explanations, or formatting\u2014\
+    just the JSON string.**"
+  tag: task_instruction
+  type: text
+- content: 'Now answer the following question:'
+  tag: question_mark
+  type: text
+- content: 'Identify the correct set of matches from Image A to Image B.
+
+    Options:
+
+    A. Part 7 in Image A matches Part 7 in Image B, Part 8 in Image A matches Part
+    8 in Image B, Part 6 in Image A matches Part 6 in Image B,  and Part 9 in Image
+    A matches Part 9 in Image B
+
+    B. Part 7 in Image A matches Part 7 in Image B, Part 8 in Image A matches Part
+    6 in Image B, Part 6 in Image A matches Part 8 in Image B,  and Part 9 in Image
+    A matches Part 9 in Image B
+
+    C. Part 7 in Image A matches Part 8 in Image B, Part 8 in Image A matches Part
+    7 in Image B, Part 6 in Image A matches Part 9 in Image B,  and Part 9 in Image
+    A matches Part 6 in Image B
+
+    D. Part 7 in Image A matches Part 7 in Image B, Part 8 in Image A matches Part
+    8 in Image B, Part 6 in Image A matches Part 9 in Image B,  and Part 9 in Image
+    A matches Part 6 in Image B
+
+    '
+  tag: question
+  type: text

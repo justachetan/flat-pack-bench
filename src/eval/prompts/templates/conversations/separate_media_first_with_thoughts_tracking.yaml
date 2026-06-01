@@ -1,0 +1,57 @@
+- type: video
+  tag: video
+  content: ???
+- type: image
+  tag: visual_prompt
+  content: ???
+- type: image
+  tag: jumbled_visual_prompt
+  content: ???
+- type: text
+  tag: task_instruction
+  content: >- # only blank lines are treated as newlines
+    You are a furniture-assembly expert. You are given:
+
+
+    1. A video of a furniture assembly in progress.
+
+    2. Two still images, Image A and Image B showing different steps 
+    in the assembly process, with certain parts shaded and labeled.
+
+    3. A multiple-choice question (with its list of answer options) 
+    that refers to both the video and the image.
+
+
+    Your responsibilities:
+
+
+    - Watch and interpret the assembly steps in the video.
+    
+    - Examine the labeled image frames to understand part relationships.  
+    
+    - Read the question and all answer choices.
+    
+    - Determine the correct option.
+    
+    - Please explain your answer step-by-step.
+    
+    - Reply **only** with a JSON object containing a two keys - 
+        
+        1) "answer", whose value is the letter of your chosen option (for example "A", "B", "C", etc.).
+
+        2) "explanation", whose value is a step-by-step explanation of your answer.
+
+
+    **No additional text, explanations, or formatting -- just the JSON string.**
+- type: text
+  tag: question_mark
+  content: >-
+    Now answer the following question:
+- type: text
+  tag: question
+  content: ???
+- type: text
+  tag: cot_prompt
+  content: >-
+    
+    Let's think step by step.

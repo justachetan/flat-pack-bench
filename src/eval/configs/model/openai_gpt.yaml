@@ -1,0 +1,5 @@
+_target_: src.eval.models.openai_gpt.OpenAIGPT
+model_version: "gpt-5-2025-08-07"
+temperature: 0.0
+seed: 42
+force_media_marks_in_prompt: false

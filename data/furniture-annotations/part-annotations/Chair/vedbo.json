@@ -1,1 +1,0 @@
-{"furniture_id": "Chair/vedbo", "annotated_semantics": {"0": "seat", "1": "leg cross support bar", "2": "right leg frame", "3": "left leg frame"}, "annotated_part_graph": {"0": ["2", "3", "1"], "1": ["2", "3", "0"], "2": ["0", "1"], "3": ["0", "1"]}, "annotated_similar_parts": {"0": [], "1": [], "2": ["3"], "3": ["2"]}}

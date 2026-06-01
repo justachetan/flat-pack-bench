@@ -1,0 +1,7 @@
+_target_: src.eval.models.llava_ov_1_5.LlavaOV1_5
+model_name: "lmms-lab/LLaVA-OneVision-1.5-4B-Instruct"
+change_sys_prompt: false
+temperature: 0.0
+do_sample: false
+max_new_tokens: 1024
+vid_spl_mode: frames

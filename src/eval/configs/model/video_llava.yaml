@@ -1,0 +1,5 @@
+_target_: src.eval.models.video_llava.VideoLLaVA
+model_name: "LanguageBind/Video-LLaVA-7B-hf"
+change_sys_prompt: false
+temperature: 0.0
+do_sample: false

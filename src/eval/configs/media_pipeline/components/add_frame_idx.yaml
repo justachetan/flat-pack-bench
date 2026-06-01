@@ -1,0 +1,7 @@
+add_frame_idx:
+  _target_: src.eval.prompts.media.components.add_frame_idx.NumberIt
+  ignore_subspl: true
+  font_size: 40
+  font_color: "red"
+  font_path: null
+  zero_index: true

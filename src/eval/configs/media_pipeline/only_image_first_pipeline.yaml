@@ -1,0 +1,9 @@
+defaults:
+  - base
+  - _self_
+
+pipeline:
+  - ${media_pipeline.components.visual_prompt}
+  - ${media_pipeline.components.separate}
+
+conv_template: ONLY_IMAGE_FIRST

@@ -1,0 +1,6 @@
+_target_: src.eval.models.arrowrl.ArrowRL
+model_name: "sherryxzh/ArrowRL-Qwen2.5-VL-7B"
+change_sys_prompt: false
+temperature: 0.0
+do_sample: false
+max_new_tokens: 1024

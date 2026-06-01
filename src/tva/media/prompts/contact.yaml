@@ -1,0 +1,51 @@
+- type: image
+  tag: visual_prompt
+  content: ???
+- type: text
+  tag: task_instruction
+  content: >- # only blank lines are treated as newlines
+    You are an expert at understanding and analyzing images. You are given:
+
+
+    1. A still image showing a step in the assembly process of a furniture item, with the furniture parts shaded and 
+    labeled, displaying numeric IDs on each visible furniture part. 
+
+    2. A binary Yes/No question that refers to the parts shown in the image.
+
+    
+    Some additional assumptions to keep in mind:
+    
+    - Two furniture parts are "connected" if they are directly attached (physically in contact), like they
+    would be in the final assembly.
+
+    - Parts simply touching each other physically, but not in their final assembly position, are not considered "connected".
+    
+    Your responsibilities:
+
+    1. Observe and interpret the assembly step shown in the image.
+
+    2. Examine the labeled image frame to understand part relationships.
+
+    3. Read the question and all answer choices.
+
+    4. Determine the correct option.
+
+    5. Respond **only** with a JSON object containing a single key, `"answer"`, whose value is either "Yes" or "No".
+
+    **Do not include any explanations or additional text - reply with only the JSON string.**
+
+
+
+- type: text
+  tag: question_mark
+  content: >-
+    
+    Now answer the following question:
+    
+- type: text
+  tag: question
+  content: >-
+    In this task, "connected" means the two parts are in direct physical
+    contact, in the same way they will be when the furniture is fully assembled
+    (not merely near each other or partially aligned). Based on the given image,
+    are Part {query_part1} and Part {query_part2} connected?

@@ -1,0 +1,4 @@
+subspl:
+  _target_: src.eval.prompts.media.components.subspl.SubSampler
+  max_num_frames: 32
+  retain_vp_frames: true

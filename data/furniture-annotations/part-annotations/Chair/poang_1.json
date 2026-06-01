@@ -1,1 +1,0 @@
-{"furniture_id": "Chair/poang_1", "annotated_semantics": {"0": "left side rail", "1": "front support rail", "2": "rear support rail", "3": "seat", "4": "right side rail"}, "annotated_part_graph": {"0": ["1", "2"], "1": ["0", "4", "3"], "2": ["0", "4", "3"], "3": ["1", "2"], "4": ["1", "2"]}, "annotated_similar_parts": {"0": ["4"], "1": ["2"], "2": ["1"], "3": [], "4": ["0"]}}

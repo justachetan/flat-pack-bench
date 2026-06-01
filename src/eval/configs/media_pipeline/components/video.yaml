@@ -1,0 +1,5 @@
+video:
+  _target_: src.eval.prompts.media.components.video.VideoComponent
+  resolution: 
+    - 480
+    - 640

@@ -1,0 +1,20 @@
+defaults:
+  - base_inference
+  - override media_pipeline: only_image_first_pipeline_new_instructions
+  - override model: qwen_2_5_vl
+  - _self_
+
+model:
+  model_name: "Qwen/Qwen2.5-VL-32B-Instruct"
+
+media_pipeline:
+  components:
+    visual_prompt:
+      edgewidth: 0
+
+media_cache_dir: "src/eval/results/media_cache/sep_media_first"
+rendered_template_dir: "src/eval/results/rendered_templates/sep_media_first"
+responses_dir: "src/eval/results/responses/qwen_2_5_vl_32b_sep_media_first"
+
+override_templates: False
+only_render_templates: False

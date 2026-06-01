@@ -1,0 +1,54 @@
+- type: video
+  tag: concat_video
+  content: ???
+- type: text
+  tag: task_instruction
+  content: >- # only blank lines are treated as newlines
+    You are a furniture-assembly expert. You are given a video input of the assembly process of a furniture item.
+    The first frame of the video is a frame taken from the assembly process, highlighted with each visible furniture part, and
+    displaying numeric IDs on each furniture part.
+
+
+    You will be asked multiple-choice questions referring to the assembly video and the labeled parts shown in the first frame.
+
+
+    Some additional assumptions to keep in mind:
+    
+    - Two furniture parts are "connected" if they are directly attached (physically in contact), like they
+    would be in the final assembly.
+
+    - Parts simply touching each other physically, but not in their final assembly position, are not considered "connected".
+    
+    - While deciding the order of "connection" events between two parts, consider the order the order in which they
+    were connected last as their actual connection, i.e., if two parts are connected, then disconnected and then connected again,
+    the last connection is the one that matters.
+    
+    - In the course of the video, some parts may be attached physically to each other before they are fixed in their final assembly position
+    by screwing, gluing, or otherwise securing them. In such cases, the parts are considered "connected" from the moment they are physically
+    attached, not when they are fixed. Hence, when answering questions about the order of connections, consider the physical attachment
+    as the connection event, even if the parts are not yet secured to each other.
+
+    Your responsibilities:
+
+
+    1. Use the video frames after the first frame to observe the assembly steps.
+    
+    2. Use the first labeled frame to identify and relate the furniture parts mentioned in the question.
+    
+    3. Carefully read the question and all answer choices.
+    
+    4. Select the correct answer based on the video and labeled parts.
+    
+    5. Respond only with a JSON object containing one key, `"answer"`, whose value is the letter of your selected option (e.g., `"A"`, `"B"`, `"C"`).
+
+    **Do not include any explanations or additional text - reply with only the JSON string.**
+
+
+- type: text
+  tag: question_mark
+  content: >-
+    Now answer the following question: 
+    
+- type: text
+  tag: question
+  content: ???

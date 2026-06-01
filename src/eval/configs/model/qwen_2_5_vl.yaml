@@ -1,0 +1,11 @@
+_target_: src.eval.models.qwen_2_5_vl_hf.Qwen2_5_VlHF
+model_name: "Qwen/Qwen2.5-VL-7B-Instruct"
+change_sys_prompt: false
+forward_pipeline: "qwen"
+add_vision_id: false
+temperature: 0.0
+do_sample: false
+max_new_tokens: 65536
+top_p: 1
+top_k: 1
+num_beams: 1

@@ -1,0 +1,16 @@
+# conf/pipelines/base.yaml
+defaults:
+  - components:
+    - video
+    - visual_prompt
+    - separate
+    - embed
+    - subspl
+    - collage
+    - concat
+    - add_frame_idx
+
+_target_: src.eval.prompts.media.pipeline.MediaPipeline
+# default ordering of steps
+pipeline: []
+conv_template: SEP_MEDIA_FIRST

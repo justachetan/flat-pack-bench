@@ -1,0 +1,44 @@
+defaults:
+  - base_inference
+  - override media_pipeline: separate_media_first_pipeline
+  - override model: qwen_2_5_vl
+  - _self_
+
+model:
+  model_name: "Qwen/Qwen2.5-VL-32B-Instruct"
+
+# overriding this with a more complete config separately here because
+# some parameters were not explicitly specified in the base config we
+# are inheriting from. Older runs are generated with the base config
+# and if we make changes there, and re-run to re-generate older responses
+# again, it tends to recreate template names based on the new base config.
+# overriding here ensures that the older runs are not affected.
+media_pipeline:
+  components:
+    visual_prompt:
+      _target_: src.eval.prompts.media.components.visual_prompt.VisualPrompt
+      resolution:
+        - 480
+        - 640
+      cmap: tab20
+      alpha: 0.1
+      anno_mode: ["Mask", "Mark"]
+      area_threshold: 0.01
+      label_mode: "1"
+      color_part_by_id: true
+      high_contrast_colors: true
+      high_contrast_colors_n_spls: 10000
+      high_contrast_ref_spls: 1000
+      high_contrast_colors_method: 'lab'
+      edgewidth: 2
+      seed: 42
+      font_size: 18
+      use_expanded_cache_key: true
+    
+
+media_cache_dir: "src/eval/results/media_cache/sep_media_first"
+rendered_template_dir: "src/eval/results/rendered_templates/sep_media_first"
+responses_dir: "src/eval/results/responses/qwen_2_5_vl_32b_sep_media_first"
+
+override_templates: False
+only_render_templates: False

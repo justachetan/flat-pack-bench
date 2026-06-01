@@ -1,0 +1,71 @@
+- type: video
+  tag: video
+  content: ???
+- type: image
+  tag: visual_prompt
+  content: ???
+- type: text
+  tag: task_instruction
+  content: >- # only blank lines are treated as newlines
+    You are a furniture-assembly expert. You are given:
+
+
+    1. A video of a furniture assembly in progress.
+
+    2. A single labeled frame from the same video, displaying numeric IDs on each visible furniture part. Call this a visual prompt.
+
+    3. A multiple-choice question (with its list of answer options) 
+    that refers to both the video and the image.
+
+    
+    Some additional assumptions to keep in mind:
+    
+    - Two furniture parts are "connected" if they are directly attached (physically in contact), like they
+    would be in the final assembly.
+
+    - Parts simply touching each other physically, but not in their final assembly position, are not considered "connected".
+
+    - While deciding the order of "connection" events between two parts, consider the order the order in which they
+    were connected last as their actual connection, i.e., if two parts are connected, then disconnected and then connected again,
+    the last connection is the one that matters.
+
+    - In the course of the video, some parts may be attached physically to each other before they are fixed in their final assembly position
+    by screwing, gluing, or otherwise securing them. In such cases, the parts are considered "connected" from the moment they are physically
+    attached, not when they are fixed. Hence, when answering questions about the order of connections, consider the physical attachment
+    as the connection event, even if the parts are not yet secured to each other.
+
+    
+    Follow these steps to answer the question:
+
+    1. Identify the furniture parts mentioned in the question using the visual prompt.
+
+    2. Watch the video to recognize these labeled parts and interpret assembly steps, focusing on connections and disconnections.
+
+    3. Find the video frame or timestamp that matches the visual prompt frame.
+
+    4. From the retrieved video frame, analyze the video before the visual prompt frame, tracking each of the labeled parts
+    and their connections from the visual prompt frame to the beginning of the video.
+
+    5. Similarly, analyze the video after the visual prompt frame, tracking each of the labeled parts and their connections 
+    from the visual prompt frame to the end of the video.
+
+    6. Consider all gathered information carefully, and make a complete chronological list of all connections observed between the labeled parts.
+
+    7. Read the question and all answer choices carefully.
+
+    8. Based on the list of connections you made, determine the correct option.
+
+    9. Respond **only** with a JSON object containing a single key, `"answer"`, whose value is the letter of your chosen option (e.g., `"A"`, `"B"`, `"C"`).
+
+    **Do not include any explanations or additional text — reply with only the JSON string.**
+
+
+    
+- type: text
+  tag: question_mark
+  content: >-
+    Now answer the following question:
+    
+- type: text
+  tag: question
+  content: ???

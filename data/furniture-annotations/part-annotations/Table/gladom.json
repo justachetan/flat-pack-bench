@@ -1,1 +1,0 @@
-{"furniture_id": "Table/gladom", "annotated_semantics": {"0": "leg frame", "1": "tabletop", "2": "undertop support ring", "3": "leg frame"}, "annotated_part_graph": {"0": ["2", "3"], "1": ["2"], "2": ["0", "3", "1"], "3": ["2", "0"]}, "annotated_similar_parts": {"0": ["3"], "1": [], "2": [], "3": ["0"]}}

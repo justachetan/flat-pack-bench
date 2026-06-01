@@ -1,0 +1,117 @@
+# removes per-pair connectivity function, adds all-connected-pairs function
+# excludes video_segment.track_object_segments_in_video
+>>> # Which pairs of parts are connected in the image?
+>>> def execute_code(input_image, masks):
+>>>     image_patch = ImagePatch(input_image=input_image, masks=masks)
+>>>     connected_pairs = image_patch.get_all_connected_part_pairs()
+>>>     return connected_pairs
+>>>
+>>>
+>>> # How many parts are visible in the image?
+>>> def execute_code(input_image, masks):
+>>>    image_patch = ImagePatch(input_image=input_image, masks=masks)
+>>>    num_visible_parts = 0
+>>>    for part_id in masks.keys():
+>>>         visibility = image_patch.get_part_visibility(part_id=part_id)
+>>>         if visibility:
+>>>             num_visible_parts += 1
+>>>    return num_visible_parts
+>>>
+>>>
+>>> # Which parts are connected to Part 1 in the shown image?
+>>> # Options:
+>>> # A. Part 0
+>>> # B. Part 2
+>>> # C. Part 3
+>>> # D. Part 4
+>>> def execute_code(input_image, masks):
+>>>     image_patch = ImagePatch(input_image=input_image, masks=masks)
+>>>     connected_part_pairs = image_patch.get_all_connected_part_pairs()
+>>>     connected_to_part_1 = None
+>>>     for part_id in masks.keys():
+>>>         if part_id == "1":
+>>>             continue
+>>>         visibility = image_patch.get_part_visibility(part_id=part_id)
+>>>         is_connected = False
+>>>         if visibility:
+>>>             is_connected = ("1", part_id) in connected_part_pairs or (part_id, "1") in connected_part_pairs
+>>>         
+>>>         if is_connected:
+>>>             connected_to_part_1= part_id
+>>>             break
+>>>     
+>>>     options = [("A", "0"), ("B", "2"), ("C", "3"), ("D", "4")]
+>>>     for option, part_id in options:
+>>>         if connected_to_part_1 == part_id:
+>>>             return option
+>>>
+>>>
+>>> # Which part in the new masks overlaps with part "0" in the original image?
+>>> # Options:
+>>> # A. Part 0
+>>> # B. Part 4
+>>> # C. Part 5
+>>> # D. Part 2
+>>> def execute_code(input_image, masks_a, masks_b):
+>>>     image_patch_a = ImagePatch(input_image=input_image, masks=masks_a)
+>>>     image_patch_b = ImagePatch(input_image=input_image, masks=masks_b)
+>>>     overlapping_pairs = image_patch_a.find_overlapping_masks(
+>>>         img_patch=image_patch_b,
+>>>         iou_threshold=0.5,
+>>>     )
+>>>     options = [("A", "0"), ("B", "4"), ("C", "5"), ("D", "2")]
+>>>     for option, part_id_b in options:
+>>>         if ("0", part_id_b) in overlapping_pairs or (part_id_b, "0") in overlapping_pairs:
+>>>             return option
+>>>
+>>> # Which parts are connected to Part 1 in frame 25 of the video?
+>>> Options:
+>>> # A. Part 0
+>>> # B. Part 2
+>>> # C. Part 3
+>>> # D. Part 4
+>>> def execute_code(video_fn, input_image, masks, frame_idx):
+>>>     image_patch = ImagePatch(input_image=input_image, masks=masks)
+>>>     video = VideoSegment(video_fn=video_fn)
+>>>     frame_25 = video.return_frames()[25]
+>>>     connected_pairs = image_patch.track_and_find_all_connected_pairs(frame_25)
+>>>     options = [("A", ("0", "1")), ("B", ("1", "2")), ("C", ("1", "3")), ("D", ("1", "4"))]
+>>>     for option, pair in options:
+>>>         if pair in connected_pairs or (pair[1], pair[0]) in connected_pairs:
+>>>             return option
+>>>
+>>>
+>>> # Which parts are connected in frame 10 of the video?
+>>> Options:
+>>> # A. Part 0 and Part 1
+>>> # B. Part 0 and Part 2
+>>> # C. Part 1 and Part 2
+>>> # D. Part 1 and Part 3
+>>> def execute_code(video_fn, input_image, masks, frame_idx):
+>>>     image_patch = ImagePatch(input_image=input_image, masks=masks)
+>>>     video = VideoSegment(video_fn=video_fn)
+>>>     frame_10 = video.return_frames()[10]
+>>>     connected_pairs = image_patch.track_and_find_all_connected_pairs(frame_10)
+>>>     options = [("A", ("0", "1")), ("B", ("0", "2")), ("C", ("1", "2")), ("D", ("1", "3"))]
+>>>     for option, pair in options:
+>>>         if pair in connected_pairs or (pair[1], pair[0]) in connected_pairs:
+>>>             return option
+>>>
+>>> # Which parts are connected in frame 10 of the video?
+>>> Options:
+>>> A. Parts 0 and 1
+>>> B. Parts 2 and 3
+>>> C. Parts 3 and 0
+>>> D. Parts 4 and 1
+>>> def execute_code(video_fn, input_image, masks, frame_idx):
+>>>    # Here the input frame_idx is the index of the frame at which the masks are provided
+>>>    video_segmenter = VideoSegment(video_fn=video_fn)
+>>>    frames = video_segmenter.return_frames()
+>>>    frame = frames[10]
+>>>    connected_pairs = image_patch.track_and_find_all_connected_pairs(
+>>>        new_input_image=frame,
+>>>    )
+>>>    options = [("A", ("0", "1")), ("B", ("2", "3")), ("C", ("3", "0")), ("D", ("4", "1"))]
+>>>    for option, pair in options:
+>>>        if pair in connected_pairs or (pair[1], pair[0]) in connected_pairs:
+>>>            return option

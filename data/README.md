@@ -1,39 +1,90 @@
-# `data` 📦
-
 <a id="top"></a>
 
-This directory contains the lightweight annotation snapshot used by the Flat-Pack Bench code release. The large media assets live in the official Hugging Face release:
+# `data`
 
-- 🤗 [Flat-Pack Bench collection](https://huggingface.co/collections/justachetan/flat-pack-bench)
-- 🧩 [Core dataset](https://huggingface.co/datasets/justachetan/flat-pack-bench)
-- 🔀 [Additional analysis data](https://huggingface.co/datasets/justachetan/flat-pack-bench-misc)
+This directory is intentionally kept lightweight in git. Download the benchmark
+artifacts from Hugging Face when you need to run evaluation or inspect the
+assets locally.
 
-Flat-Pack Bench builds on the IKEA Manuals at Work data and paper. Furniture categories, furniture names, video IDs, and the alignment between assembly videos and furniture instances follow that source dataset. This repository adds the benchmark-facing question set, prompt-time part masks, furniture part metadata, and part-ID scrambling variants used for evaluation.
+- Core dataset: <https://huggingface.co/datasets/justachetan/flat-pack-bench>
+- Additional experiments: <https://huggingface.co/datasets/justachetan/flat-pack-bench-misc>
+- Evaluation cache: <https://huggingface.co/datasets/justachetan/flat-pack-bench-evals>
+
+Run the commands below from the repository root, after setting up the `fpb` conda environment as indicated in the main [README](../README.md).
 
 <a id="table-of-contents"></a>
 
-## 📚 Table of Contents
+## Table of Contents
 
-- [🗂️ Directory Map](#directory-map)
-- [🧩 Questions JSONL](#questions-jsonl)
+- [Quick Start](#quick-start)
+- [Download Modes](#download-modes)
+- [Directory Map](#directory-map)
+- [Questions JSONL](#questions-jsonl)
   - [Top-Level Fields](#questions-jsonl-top-level-fields)
   - [Nested `question` Object](#questions-jsonl-nested-question-object)
-- [📝 Source Question YAMLs](#source-question-yamls)
-- [🎭 Segmentation Masks](#segmentation-masks)
-- [🪑 Furniture Part Annotations](#furniture-part-annotations)
+- [Source Question YAMLs](#source-question-yamls)
+- [Segmentation Masks](#segmentation-masks)
+- [Furniture Part Annotations](#furniture-part-annotations)
   - [Per-Furniture Schema](#per-furniture-schema)
-- [🔀 Scrambled Questions](#scrambled-questions)
+- [Videos And RGB Frames](#videos-and-rgb-frames)
+- [Scrambled Questions](#scrambled-questions)
   - [JSONL Files](#scrambled-jsonl-files)
   - [YAML Files](#scrambled-yaml-files)
-- [🎭 Scrambled Segmentation Masks](#scrambled-segmentation-masks)
-- [🧭 Usage Notes](#usage-notes)
+- [Scrambled Segmentation Masks](#scrambled-segmentation-masks)
+- [Evaluation Cache](#evaluation-cache)
+- [Additional Experiment Artifacts](#additional-experiment-artifacts)
+- [Usage Notes](#usage-notes)
+
+<a id="quick-start"></a>
+
+## Quick Start [⤴](#table-of-contents)
+
+Download the metadata needed for the benchmark code paths that read from
+`data/questions`, `data/segmentation-masks`, `data/furniture-annotations`,
+`data/scrambled-questions`, and `data/scrambled-segmentation-masks`:
+
+```bash
+conda run -n fpb python scripts/download_data.py --metadata-only
+```
+
+If no mode flag is passed, the downloader defaults to `--metadata-only`:
+
+```bash
+conda run -n fpb python scripts/download_data.py
+```
+
+<a id="download-modes"></a>
+
+## Download Modes [⤴](#table-of-contents)
+
+| Command | Downloads |
+|---|---|
+| `conda run -n fpb python scripts/download_data.py --metadata-only` | Questions, source YAMLs, segmentation masks, furniture part annotations, scrambled questions, and scrambled segmentation masks. |
+| `conda run -n fpb python scripts/download_data.py --full-data` | Everything from `--metadata-only`, plus `videos/` and `rgb-frames/` from the core dataset. |
+| `conda run -n fpb python scripts/download_data.py --full-eval-cache` | The full eval cache into `data/eval-cache/`. |
+| `conda run -n fpb python scripts/download_data.py --addl-expts` | Everything from the additional experiments dataset. |
+| `conda run -n fpb python scripts/download_data.py --full-data --full-eval-cache --addl-expts` | All benchmark data, eval cache files, and additional experiment artifacts. |
+
+Use `--data-dir` to write the same layout somewhere else:
+
+```bash
+conda run -n fpb python scripts/download_data.py --metadata-only --data-dir /tmp/fpb-data
+```
+
+If Hugging Face returns HTTP 429 during a large first-time download, wait a few
+minutes and rerun the same command. Files that were already downloaded are
+reused.
 
 <a id="directory-map"></a>
 
-## 🗂️ Directory Map [⤴](#table-of-contents)
+## Directory Map [⤴](#table-of-contents)
+
+After downloading all artifacts, the local layout is:
 
 ```text
 data/
+├── README.md
+├── .gitignore
 ├── questions/
 │   ├── questions.jsonl
 │   └── yamls/
@@ -43,18 +94,28 @@ data/
 ├── scrambled-questions/
 │   ├── jsonl/
 │   └── yaml/
-└── scrambled-segmentation-masks/
+├── scrambled-segmentation-masks/
+├── videos/
+├── rgb-frames/
+├── eval-cache/
+├── tva-agent-traces/
+└── tva-segmentation-masks/
 ```
 
-`questions/`, `segmentation-masks/`, and `furniture-annotations/` correspond to the core benchmark release. `scrambled-questions/` and `scrambled-segmentation-masks/` contain deterministic part-label permutations used to test whether models rely on stable part ID priors.
+`questions/`, `segmentation-masks/`, `furniture-annotations/`, `videos/`, and
+`rgb-frames/` come from the core dataset. `scrambled-questions/`,
+`scrambled-segmentation-masks/`, `tva-agent-traces/`, and
+`tva-segmentation-masks/` come from the additional experiments dataset.
+`eval-cache/` comes from the evaluation cache dataset.
 
 <a id="questions-jsonl"></a>
 
-## 🧩 Questions JSONL [⤴](#table-of-contents)
+## Questions JSONL [⤴](#table-of-contents)
 
 Path: `questions/questions.jsonl`
 
-This is the canonical benchmark table. Each line is a standalone JSON object for one multiple-choice question. The file has 602 rows.
+This is the canonical benchmark table. Each line is a standalone JSON object for
+one multiple-choice question. The file has 602 rows.
 
 <a id="questions-jsonl-top-level-fields"></a>
 
@@ -67,9 +128,9 @@ This is the canonical benchmark table. Each line is a standalone JSON object for
 | `question_category` | string | Broad skill family: `temporal_loc`, `temporal_ord`, `mating`, or `tracking`. |
 | `template_type` | string | More specific template name, such as `track_single`, `track_multi`, `many_part_order`, `find_edges`, or `latest_change`. |
 | `template_idx` | integer | Numeric template index used by the generation pipeline. |
-| `vid_category` | string | IKEA Manuals at Work furniture category, such as `Chair`, `Table`, `Bench`, `Shelf`, `Desk`, or `Misc`. |
+| `vid_category` | string | Furniture category, such as `Chair`, `Table`, `Bench`, `Shelf`, `Desk`, or `Misc`. |
 | `furniture_name` | string | Furniture instance name, for example `ronninge`, `stig`, `gladom`, or `laiva`. |
-| `video_id` | string | Assembly video identifier inherited from the IKEA Manuals at Work alignment. |
+| `video_id` | string | Assembly video identifier. |
 | `frame_idx` | integer or list | Keyframe index for single-frame prompts, or a list of keyframes for tracking/correspondence prompts. |
 | `question` | object | Rendered question text, answer options, and answer metadata. |
 | `prompt_img_fn` | string, optional | Prompt image filename for single-image question variants. |
@@ -90,19 +151,23 @@ This is the canonical benchmark table. Each line is a standalone JSON object for
 | `correct_option` | object | Correct answer record with raw part ID/value, label, text, index, and full option text when available. |
 | `num_options` | integer | Number of answer choices. |
 
-Each option record usually has `raw`, `label`, `text`, and `full_text`. `raw` is the underlying answer value, while `label` and `full_text` describe the rendered multiple-choice option shown to models.
+Each option record usually has `raw`, `label`, `text`, and `full_text`. `raw` is
+the underlying answer value, while `label` and `full_text` describe the rendered
+multiple-choice option shown to models.
 
 <a id="source-question-yamls"></a>
 
-## 📝 Source Question YAMLs [⤴](#table-of-contents)
+## Source Question YAMLs [⤴](#table-of-contents)
 
 Path pattern: `questions/yamls/<question_id>.yaml`
 
-These YAML files are the compact source form for the benchmark questions. They are easier to inspect by hand and are useful when code needs question parameters rather than fully rendered prompt strings.
+These YAML files are the compact source form for the benchmark questions. They
+are easier to inspect by hand and are useful when code needs question parameters
+rather than fully rendered prompt strings.
 
 | Field | Type | Meaning |
 |---|---|---|
-| `category` | string | Furniture category from IKEA Manuals at Work. |
+| `category` | string | Furniture category. |
 | `name` | string | Furniture instance name. This corresponds to `furniture_name` in the JSONL. |
 | `video_id` | string | Assembly video identifier. |
 | `frame_idx` | integer or list | Keyframe or keyframes used by the prompt. |
@@ -112,11 +177,13 @@ These YAML files are the compact source form for the benchmark questions. They a
 | `options` | list | Candidate answers. Each entry stores at least a `raw` value. |
 | `correct_option` | object | Correct answer, including `raw` and zero-based `idx`. |
 
-The YAMLs intentionally keep part IDs as strings. That matches the furniture annotation files and avoids accidental numeric coercion when IDs are used as object keys.
+The YAMLs intentionally keep part IDs as strings. That matches the furniture
+annotation files and avoids accidental numeric coercion when IDs are used as
+object keys.
 
 <a id="segmentation-masks"></a>
 
-## 🎭 Segmentation Masks [⤴](#table-of-contents)
+## Segmentation Masks [⤴](#table-of-contents)
 
 Path pattern:
 
@@ -124,17 +191,18 @@ Path pattern:
 segmentation-masks/<category>/<furniture_name>/<video_id>/<video_id>.json
 ```
 
-These files contain part-level masks for prompt frames. A mask file is nested by annotation source, keyframe index, and part ID:
+These files contain part-level masks for prompt frames. A mask file is nested by
+annotation source, keyframe index, and part ID:
 
 ```text
-manual -> frame_index -> part_id -> mask_rle
+<annotation_source> -> frame_index -> part_id -> mask_rle
 ```
 
 Example shape:
 
 ```json
 {
-  "manual": {
+  "<annotation_source>": {
     "0": {
       "3": {
         "size": [720, 1280],
@@ -147,17 +215,18 @@ Example shape:
 
 | Level | Type | Meaning |
 |---|---|---|
-| `manual` | object | Top-level annotation source. |
-| `manual.<frame_index>` | object | Masks for a keyframe, with the frame index stored as a string. |
-| `manual.<frame_index>.<part_id>` | object | Mask for a furniture part. Part IDs match `furniture-annotations/`. |
+| `<annotation_source>` | object | Top-level annotation source key. |
+| `<annotation_source>.<frame_index>` | object | Masks for a keyframe, with the frame index stored as a string. |
+| `<annotation_source>.<frame_index>.<part_id>` | object | Mask for a furniture part. Part IDs match `furniture-annotations/`. |
 | `size` | list of integers | Mask dimensions as `[height, width]`. |
 | `counts` | string | Compressed COCO-style run-length encoding for the binary mask. |
 
-The mask JSON stores geometry only. The semantic name for each part ID comes from the matching furniture annotation file.
+The mask JSON stores geometry only. The semantic name for each part ID comes
+from the matching furniture annotation file.
 
 <a id="furniture-part-annotations"></a>
 
-## 🪑 Furniture Part Annotations [⤴](#table-of-contents)
+## Furniture Part Annotations [⤴](#table-of-contents)
 
 Path patterns:
 
@@ -166,7 +235,9 @@ furniture-annotations/part-annotations/<category>/<furniture_name>.json
 furniture-annotations/part-annotations/index.json
 ```
 
-The per-furniture files describe the physical part vocabulary used by questions and masks. `index.json` is a convenience aggregate keyed by `<category>/<furniture_name>` with the same records collected in one file.
+The per-furniture files describe the physical part vocabulary used by questions
+and masks. `index.json` is a convenience aggregate keyed by
+`<category>/<furniture_name>` with the same records collected in one file.
 
 <a id="per-furniture-schema"></a>
 
@@ -179,11 +250,29 @@ The per-furniture files describe the physical part vocabulary used by questions 
 | `annotated_part_graph` | object | Undirected physical connectivity graph. Each part ID maps to the part IDs it touches or connects to in the assembled object. |
 | `annotated_similar_parts` | object | Mapping from a part ID to visually or functionally similar part IDs. This is useful for reasoning about ambiguous repeated parts. |
 
-Part IDs are strings such as `"0"`, `"1"`, and `"2"`. These IDs are the same labels shown in visual prompts and used in segmentation masks.
+Part IDs are strings such as `"0"`, `"1"`, and `"2"`. These IDs are the same
+labels shown in visual prompts and used in segmentation masks.
+
+<a id="videos-and-rgb-frames"></a>
+
+## Videos And RGB Frames [⤴](#table-of-contents)
+
+Downloaded by `--full-data`.
+
+Path patterns:
+
+```text
+videos/<video_variant>/<sampling>/<category>/<furniture_name>/<video_id>/<video_id>.mp4
+rgb-frames/<category>/<furniture_name>/<video_id>/
+```
+
+The video files and RGB frame directories provide the media referenced by
+evaluation prompts and media-pipeline configs. Code paths that use
+`data/videos/...` or `data/rgb-frames/...` require `--full-data`.
 
 <a id="scrambled-questions"></a>
 
-## 🔀 Scrambled Questions [⤴](#table-of-contents)
+## Scrambled Questions [⤴](#table-of-contents)
 
 Paths:
 
@@ -192,13 +281,17 @@ scrambled-questions/jsonl/questions_shuffled_part_ids*.jsonl
 scrambled-questions/yaml/seed<seed>/<question_id>.yaml
 ```
 
-Scrambled questions preserve the underlying videos, furniture, templates, and answers while changing the visible part labels. Each `seed<seed>` directory corresponds to one deterministic part-ID permutation.
+Scrambled questions preserve the underlying videos, furniture, templates, and
+answers while changing the visible part labels. Each `seed<seed>` directory
+corresponds to one deterministic part-ID permutation.
 
 <a id="scrambled-jsonl-files"></a>
 
 ### JSONL Files [⤴](#table-of-contents)
 
-The JSONL files follow the same top-level schema as `questions/questions.jsonl`, but the rendered text and answer choices use shuffled part IDs. These files are convenient for batch evaluation.
+The JSONL files follow the same top-level schema as `questions/questions.jsonl`,
+but the rendered text and answer choices use shuffled part IDs. These files are
+convenient for batch evaluation.
 
 <a id="scrambled-yaml-files"></a>
 
@@ -210,11 +303,12 @@ The YAML files follow the source question schema above and add:
 |---|---|---|
 | `metadata.part_id_mapping` | object | Mapping from original part ID to shuffled display ID for the seed. |
 
-Use `metadata.part_id_mapping` when you need to translate a scrambled label back to the original furniture annotation.
+Use `metadata.part_id_mapping` when you need to translate a scrambled label back
+to the original furniture annotation.
 
 <a id="scrambled-segmentation-masks"></a>
 
-## 🎭 Scrambled Segmentation Masks [⤴](#table-of-contents)
+## Scrambled Segmentation Masks [⤴](#table-of-contents)
 
 Path pattern:
 
@@ -222,14 +316,50 @@ Path pattern:
 scrambled-segmentation-masks/seed<seed>/<category>/<furniture_name>/<video_id>/<video_id>.json
 ```
 
-These masks have the same nested structure as `segmentation-masks/`, but the part IDs have already been remapped to match the labels shown in the corresponding scrambled question seed. Evaluation code should pair `scrambled-questions/yaml/seed<seed>/` with `scrambled-segmentation-masks/seed<seed>/` when operating in a shuffled-label setting.
+These masks have the same nested structure as `segmentation-masks/`, but the
+part IDs have already been remapped to match the labels shown in the
+corresponding scrambled question seed. Evaluation code should pair
+`scrambled-questions/yaml/seed<seed>/` with
+`scrambled-segmentation-masks/seed<seed>/` when operating in a shuffled-label
+setting.
+
+<a id="evaluation-cache"></a>
+
+## Evaluation Cache [⤴](#table-of-contents)
+
+Downloaded by `--full-eval-cache` into `data/eval-cache/`.
+
+The eval cache contains released model outputs, rendered prompt templates, media
+caches, aggregate result files, and related evaluation artifacts. Keep this data
+outside git; it is reproducible from the Hugging Face dataset.
+
+<a id="additional-experiment-artifacts"></a>
+
+## Additional Experiment Artifacts [⤴](#table-of-contents)
+
+Downloaded by `--addl-expts`.
+
+`--addl-expts` downloads the full additional experiments dataset into `data/`.
+This includes the scrambled assets described above plus:
+
+| Path | Contents |
+|---|---|
+| `tva-agent-traces/` | Agent traces and examples from TVA-style experiments. |
+| `tva-segmentation-masks/` | Segmentation masks used by TVA experiments. |
 
 <a id="usage-notes"></a>
 
-## 🧭 Usage Notes [⤴](#table-of-contents)
+## Usage Notes [⤴](#table-of-contents)
 
-- The annotations here are small enough to version with the code release. Full videos, frames, and larger media assets should be pulled from the Hugging Face data release.
-- When joining files, use `(vid_category or category, furniture_name or name, video_id)` as the stable furniture/video identity.
-- For model-facing question text, prefer `questions/questions.jsonl`. For generation or debugging, inspect the YAML source files.
-- For part names and connectivity, load the matching `furniture-annotations/part-annotations/<category>/<furniture_name>.json` file.
-- For mask rendering, decode `counts` and `size` with a COCO RLE-compatible utility such as `pycocotools.mask.decode`.
+- Downloaded files are ignored by `data/.gitignore`.
+- Existing code can keep reading from `data/...` paths after the relevant mode
+  has been downloaded.
+- When joining files, use `(vid_category or category, furniture_name or name,
+  video_id)` as the stable furniture/video identity.
+- For model-facing question text, prefer `questions/questions.jsonl`. For
+  generation or debugging, inspect the YAML source files.
+- For part names and connectivity, load the matching
+  `furniture-annotations/part-annotations/<category>/<furniture_name>.json`
+  file.
+- For mask rendering, decode `counts` and `size` with a COCO RLE-compatible
+  utility such as `pycocotools.mask.decode`.

@@ -1,0 +1,10 @@
+_target_: src.eval.models.internvl3.InternVL3
+model_name: "OpenGVLab/InternVL3-14B-hf"
+change_sys_prompt: false
+temperature: 0.0
+do_sample: false
+max_new_tokens: 65536
+vid_spl_mode: frames
+num_beams: 1
+top_p: 1
+top_k: 1

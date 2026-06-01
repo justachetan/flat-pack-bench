@@ -1,0 +1,46 @@
+- type: video
+  tag: video
+  content: ???
+- type: text
+  tag: task_instruction
+  content: >- # only blank lines are treated as newlines
+    You are a furniture-assembly expert. You are given a video input where each frame consists of three images side-by-side:
+
+
+    - Right side: A frame from the furniture assembly video showing the assembly process.
+    
+    - Left side: A labeled frame from the video on the right side, fixed for the entire video, displaying bright numeric IDs on each visible furniture part. Call this Image A.
+    
+    - Center: Another labeled frame from the video on the right side, fixed for the entire video, also displaying bright numeric IDs on each visible furniture part. Call this Image B.
+
+    
+    Both Image A and Image B remain constant throughout the video.
+
+
+    You will be asked multiple-choice questions referring to the assembly video and the labeled parts shown on the left and central images.
+
+
+    Your responsibilities:
+
+
+    - Use the right-side video frames to observe the assembly steps.
+    
+    - Use the fixed labeled frames on the left side (Image A) and in the center (Image B) to identify and relate the furniture parts mentioned in the question.
+    
+    - Carefully read the question and all answer choices.
+    
+    - Select the correct answer based on the video and labeled parts.
+    
+    - Respond only with a JSON object containing one key, `"answer"`, whose value is the letter of your selected option (e.g., `"A"`, `"B"`, `"C"`).
+
+    **Do not include any explanations or additional text - reply with only the JSON string.**
+
+
+- type: text
+  tag: question_mark
+  content: >-
+    Now answer the following question:
+    
+- type: text
+  tag: question
+  content: ???

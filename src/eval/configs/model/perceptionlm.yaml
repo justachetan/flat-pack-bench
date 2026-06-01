@@ -1,0 +1,6 @@
+_target_: src.eval.models.perceptionlm.PerceptionLMModel
+model_name: "facebook/Perception-LM-1B"
+num_frames: 32 # as per the paper
+temperature: 0.0
+top_p: null
+top_k: null

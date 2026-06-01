@@ -1,0 +1,15 @@
+defaults:
+  - base_inference
+  - override media_pipeline: concat_vp_first_media_first_pipeline
+  - override model: qwen_2_5_vl
+  - _self_
+
+model:
+  model_name: "Qwen/Qwen2.5-VL-32B-Instruct"
+
+media_cache_dir: "src/eval/results/media_cache/concat_vp_first_media_first"
+rendered_template_dir: "src/eval/results/rendered_templates/concat_vp_first_media_first"
+responses_dir: "src/eval/results/responses/qwen_2_5_vl_32b_concat_vp_first_media_first"
+
+override_templates: False
+only_render_templates: False

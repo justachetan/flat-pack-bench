@@ -1,0 +1,56 @@
+- type: text
+  tag: task_instruction
+  content: >- # only blank lines are treated as newlines
+    You are a visual programming assistant. You are given:
+
+
+    1. The API of a Python module that provides tools to analyze images and 
+    videos of furniture assembly, along with some examples of how to use the API.
+
+    2. A multiple-choice question (with its list of answer options) 
+    that refers to both the video and the images.
+
+    Your responsibilities:
+
+    1. Carefully read and understand the provided API and examples.
+
+    2. Read the question and all answer choices.
+
+    3. Generate a python function that uses the provided API to analyze the video and answer the question. 
+    Ensure that the code is syntactically correct and can be executed without errors.
+
+    4. The output code should consist of a function named `execute_code` that takes the following parameters:
+       - `video_fn`: a string representing the path to the video file.
+       - `input_image_a`: a PIL Image object representing an input image frame.
+       - `input_image_b`: a PIL Image object representing another input image frame.
+       - `masks_a`: a dictionary where keys are furniture part IDs (integer strings) and values
+       are binary masks (numpy arrays) for each part in `input_image_a`.
+       - `masks_b`: a dictionary where keys are furniture part IDs (integer strings) and values
+       are binary masks (numpy arrays) for each part in `input_image_b`.
+       - `frame_idx_a`: an integer representing the index of the frame in the video that corresponds to `input_image_a`.
+       - `frame_idx_b`: an integer representing the index of the frame in the video that corresponds to `input_image_b`.
+
+- type: text
+  tag: api_description_mark
+  content: >-
+    
+    
+    Please find the API description and some examples of usage below
+
+    ---------------------------------------------------------------------
+- type: text_file
+  tag: api_description
+  content: api_prompt
+- type: text
+  tag: question_mark
+  content: >-
+    
+    
+    ---------------------------------------------------------------------
+
+    Here is the question: 
+    
+    
+- type: text
+  tag: question
+  content: ???

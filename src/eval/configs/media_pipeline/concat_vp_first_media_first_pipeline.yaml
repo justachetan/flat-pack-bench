@@ -1,0 +1,11 @@
+defaults:
+  - base
+  - _self_
+
+_target_: src.eval.prompts.media.pipeline.MediaPipeline
+pipeline:
+  - ${media_pipeline.components.video}
+  - ${media_pipeline.components.visual_prompt}
+  - ${media_pipeline.components.concat}
+
+conv_template: CONCAT_VP_FIRST_MEDIA_FIRST_PROACTIVE_COMMON

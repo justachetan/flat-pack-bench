@@ -1,0 +1,10 @@
+defaults:
+  - base
+  - _self_
+
+pipeline:
+  - ${media_pipeline.components.video}
+  - ${media_pipeline.components.visual_prompt}
+  - ${media_pipeline.components.separate}
+
+conv_template: SEP_MEDIA_FIRST_PROACTIVE_COMMON_WITH_THOUGHTS_V2

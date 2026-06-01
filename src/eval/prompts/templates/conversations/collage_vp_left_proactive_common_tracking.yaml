@@ -1,0 +1,63 @@
+- type: video
+  tag: video
+  content: ???
+- type: text
+  tag: task_instruction
+  content: >- # only blank lines are treated as newlines
+    You are a furniture-assembly expert. You are given a video input where each frame consists of three images side-by-side:
+
+
+    1. Right side: A frame from the furniture assembly video showing the assembly process.
+    
+    2. Left side: A labeled frame from the video on the right side, fixed for the entire video, displaying bright numeric IDs on each visible furniture part. Call this Image A.
+    
+    3. Center: Another labeled frame from the video on the right side, fixed for the entire video, also displaying bright numeric IDs on each visible furniture part. Call this Image B.
+
+    
+    Both Image A and Image B remain constant throughout the video.
+
+    Note: The numeric IDs in Image A and Image B are not necessarily the same; the same ID may refer to different parts in each image.
+
+
+    You will be asked multiple-choice questions referring to the assembly video and the labeled parts shown on the left and central images.
+
+    Some additional assumptions to keep in mind:
+    
+    - Two furniture parts are "connected" if they are directly attached (physically in contact), like they
+    would be in the final assembly.
+
+    - Parts simply touching each other physically, but not in their final assembly position, are not considered "connected".
+    
+    - While deciding the order of "connection" events between two parts, consider the order the order in which they
+    were connected last as their actual connection, i.e., if two parts are connected, then disconnected and then connected again,
+    the last connection is the one that matters.
+    
+    - In the course of the video, some parts may be attached physically to each other before they are fixed in their final assembly position
+    by screwing, gluing, or otherwise securing them. In such cases, the parts are considered "connected" from the moment they are physically
+    attached, not when they are fixed. Hence, when answering questions about the order of connections, consider the physical attachment
+    as the connection event, even if the parts are not yet secured to each other.
+
+    Your responsibilities:
+
+
+    1. Use the right-side video frames to observe the assembly steps.
+
+    2. Use the fixed labeled frames on the left side (Image A) and in the center (Image B) to identify and relate the furniture parts mentioned in the question.
+
+    3. Carefully read the question and all answer choices.
+
+    4. Select the correct answer based on the video and labeled parts.
+
+    5. Respond only with a JSON object containing one key, `"answer"`, whose value is the letter of your selected option (e.g., `"A"`, `"B"`, `"C"`).
+
+    **Do not include any explanations or additional text - reply with only the JSON string.**
+
+
+- type: text
+  tag: question_mark
+  content: >-
+    Now answer the following question: 
+    
+- type: text
+  tag: question
+  content: ???

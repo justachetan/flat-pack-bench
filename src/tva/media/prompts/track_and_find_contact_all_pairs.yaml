@@ -1,0 +1,56 @@
+- type: image
+  tag: visual_prompt
+  content: ???
+- type: image
+  tag: visual_prompt_2
+  content: ???
+- type: text
+  tag: task_instruction
+  content: >- # only blank lines are treated as newlines
+    You are an expert at understanding and analyzing images. You are given:
+
+
+    1. A still image showing a step in the assembly process of a furniture item, with the furniture parts shaded and 
+    labeled, displaying numeric IDs on each visible furniture part. Call this Picture 1.
+
+    2. Another still image showing a different step in the assembly process of the same furniture item, containing
+    some of the same parts as the first image, but possibly arranged differently and without labels.
+    Call this Picture 2.
+
+    3. A binary Yes/No question that refers to the parts shown in the image.
+
+    
+    Some additional assumptions to keep in mind:
+    
+    - Two furniture parts are "connected" if they are directly attached (physically in contact), like they
+    would be in the final assembly.
+
+    - Parts simply touching each other physically, but not in their final assembly position, are not considered "connected".
+    
+    Your responsibilities:
+
+    1. Observe and interpret the assembly steps shown in the images.
+
+    2. Examine the labeled image frame to understand part relationships.
+
+    3. Read the question carefully and respond with an answer.
+
+    4. Respond **only** with a JSON object containing a single key, `"answer"`, whose value is a list of 2-tuples,
+    where each tuple contains the numeric IDs of parts as a string, e.g., [["1", "2"], ["2", "3"]].
+
+    **Do not include any explanations or additional text - reply with only the JSON string.**
+
+
+- type: text
+  tag: question_mark
+  content: >-
+    
+    Now answer the following question:
+    
+- type: text
+  tag: question
+  content: >-
+    In this task, "connected" means the two parts are in direct physical
+    contact, in the same way they will be when the furniture is fully assembled
+    (not merely near each other or partially aligned). Out of all the visible parts in Picture 1:
+    {part_list_str}, what are all the pairs of parts that are visible and connected in Picture 2?

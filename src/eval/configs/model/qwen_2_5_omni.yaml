@@ -1,0 +1,7 @@
+_target_: src.eval.models.qwen_2_5_omni_hf.Qwen2_5_OmniHF
+model_name: "Qwen/Qwen2.5-Omni-7B"
+change_sys_prompt: false
+forward_pipeline: "qwen"
+add_vision_id: false
+temperature: 0.0
+do_sample: false

@@ -1,0 +1,2 @@
+embed:
+  _target_: src.eval.prompts.media.components.embed.EmbedComponent

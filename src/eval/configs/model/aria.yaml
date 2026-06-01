@@ -1,0 +1,6 @@
+_target_: src.eval.models.aria.Aria
+model_name: "rhymes-ai/Aria"
+change_sys_prompt: false
+temperature: 0.0
+do_sample: false
+max_new_tokens: 2048

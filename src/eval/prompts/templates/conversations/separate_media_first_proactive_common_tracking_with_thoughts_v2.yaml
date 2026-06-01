@@ -1,0 +1,80 @@
+- type: video
+  tag: video
+  content: ???
+- type: image
+  tag: visual_prompt
+  content: ???
+- type: image
+  tag: jumbled_visual_prompt
+  content: ???
+- type: text
+  tag: task_instruction
+  content: >- # only blank lines are treated as newlines
+    You are a furniture-assembly expert. You are given:
+
+
+    1. A video of a furniture assembly in progress.
+
+    2. Two labeled frames from the same video, called Image A and Image B, each displaying numeric IDs on visible furniture parts. 
+    Note: The numeric IDs in Image A and Image B are not necessarily the same; the same ID may refer to different parts in each image.
+
+
+    3. A multiple-choice question (with its list of answer options) 
+    that refers to both the video and the image.
+
+    
+    Some additional assumptions to keep in mind:
+    
+    - Two furniture parts are "connected" if they are directly attached (physically in contact), like they
+    would be in the final assembly.
+
+    - Parts simply touching each other physically, but not in their final assembly position, are not considered "connected".
+    
+    - While deciding the order of "connection" events between two parts, consider the order the order in which they
+    were connected last as their actual connection, i.e., if two parts are connected, then disconnected and then connected again,
+    the last connection is the one that matters.
+
+    - In the course of the video, some parts may be attached physically to each other before they are fixed in their final assembly position
+    by screwing, gluing, or otherwise securing them. In such cases, the parts are considered "connected" from the moment they are physically
+    attached, not when they are fixed. Hence, when answering questions about the order of connections, consider the physical attachment
+    as the connection event, even if the parts are not yet secured to each other.
+    
+    Your responsibilities:
+
+    1. Watch and interpret the assembly steps in the video.
+
+    2. Examine the labeled image frame to understand part relationships.
+
+    3. Read the question and all answer choices.
+
+    4. Determine the correct option.
+
+    5. Please explain your answer step-by-step. This explanation should contain your reasoning process, including how you analyzed the video and images to arrive at your conclusion. Do not simply restate the question or the answer choices.
+
+    6. Respond **only** with a JSON object containing two keys - 
+        
+        A) "answer", whose value is the letter of your chosen option (for example "A", "B", "C", etc.).
+
+        B) "explanation", whose value is a step-by-step explanation of your answer. This must not be a restatement of the question or the answer choices, but rather a detailed reasoning process that leads to your answer. For example, describe how you analyzed the video and images to arrive at your conclusion or why certain options were eliminated.
+
+    **Do not include any explanations or additional text - reply with only the JSON string.**
+
+
+    
+- type: text
+  tag: question_mark
+  content: >-
+
+
+    Now answer the following question: 
+    
+- type: text
+  tag: question
+  content: ???
+- type: text
+  tag: cot_prompt
+  content: >-
+
+
+  
+    Let's think step by step.

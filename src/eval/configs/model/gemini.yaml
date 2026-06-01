@@ -1,0 +1,14 @@
+_target_: src.eval.models.gemini.Gemini
+model_name: "gemini-2.5-flash"
+thinking_config: 
+  thinking_budget: -1
+  include_thoughts: true
+generate_config:
+  temperature: 0.0
+  media_resolution: high
+  seed: 42
+use_vertexai: false
+api_version: "v1"
+video_fps: 1
+use_paid_api: false
+clear_cache_at_init: true

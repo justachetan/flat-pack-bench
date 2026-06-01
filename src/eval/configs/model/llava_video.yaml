@@ -1,0 +1,7 @@
+_target_: src.eval.models.llava_video.LlavaVideo
+model_name: "lmms-lab/LLaVA-Video-7B-Qwen2"
+change_sys_prompt: false
+temperature: 0.0
+do_sample: false
+max_new_tokens: 4096
+max_frames_num: 64

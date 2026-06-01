@@ -1,0 +1,7 @@
+_target_: src.eval.models.llava_next_video.LlavaNextVideo
+model_name: "llava-hf/LLaVA-NeXT-Video-7B-hf"
+change_sys_prompt: false
+temperature: 0.0
+do_sample: false
+mixed_media_mode: video_first
+vid_spl_mode: frames

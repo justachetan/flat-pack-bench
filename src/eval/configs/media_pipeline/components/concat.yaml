@@ -1,0 +1,3 @@
+concat:
+  _target_: src.eval.prompts.media.components.concat.ConcatComponent
+  vid_first: false

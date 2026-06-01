@@ -1,0 +1,5 @@
+collage:
+  _target_: src.eval.prompts.media.components.collage.CollageComponent
+  border_size: 10
+  border_color: 0
+  prompt_pos: left

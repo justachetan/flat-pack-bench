@@ -1,0 +1,16 @@
+_target_: src.eval.models.gemini.Gemini
+model_name: "gemini-3-pro-preview"
+thinking_config: 
+  thinking_level: "high"
+  include_thoughts: true
+generate_config: 
+  # recommended temperature: https://ai.google.dev/gemini-api/docs/gemini-3#temperature
+  temperature: 1.0
+  media_resolution: high
+  seed: 42
+use_vertexai: false
+api_version: "v1"
+video_fps: 1
+use_paid_api: true
+clear_cache_at_init: true
+tmpdir: "tmp/gemini"

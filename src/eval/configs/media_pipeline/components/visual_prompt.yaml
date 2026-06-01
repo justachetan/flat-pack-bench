@@ -1,0 +1,19 @@
+visual_prompt:
+  _target_: src.eval.prompts.media.components.visual_prompt.VisualPrompt
+  resolution:
+    - 480
+    - 640
+  cmap: tab20
+  alpha: 0.1
+  anno_mode: ["Mask", "Mark"]
+  area_threshold: 0.01
+  label_mode: "1"
+  high_contrast_colors: true
+  high_contrast_colors_n_spls: 10000
+  high_contrast_ref_spls: 1000
+  high_contrast_colors_method: 'lab'
+  # TODO: might need to comment below to work with old cached data
+  edgewidth: 2
+  seed: 42
+  font_size: 18
+  use_expanded_cache_key: false

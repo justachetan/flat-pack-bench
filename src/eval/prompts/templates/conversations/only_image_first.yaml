@@ -1,0 +1,37 @@
+- type: image
+  tag: visual_prompt
+  content: ???
+- type: text
+  tag: task_instruction
+  content: >- # only blank lines are treated as newlines
+    You are a furniture-assembly expert. For each query, you will receive:
+    
+
+    1. A still image showing a step in the assembly process of a furniture item,
+    with certain parts shaded and labeled.
+
+    2. A multiple-choice question (and its list of answer options) that refers to that image.
+
+
+    Your responsibilities:
+    
+
+    - Examine the labeled image frame to understand part relationships.
+    
+    - Read the question and all answer choices.
+    
+    - Determine the correct option.
+    
+    - Reply **only** with a JSON object containing a single key, `"answer"`, 
+    whose value is the letter of your chosen option (for example `"A"`, `"B"`, `"C"`, etc.).
+    
+
+    **No additional text, explanations, or formatting - just the JSON string.**
+- type: text
+  tag: question_mark
+  content: >-
+    Now answer the following question:
+    
+- type: text
+  tag: question
+  content: ???

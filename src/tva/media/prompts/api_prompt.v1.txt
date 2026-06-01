@@ -1,0 +1,381 @@
+import pandas as pd
+import numpy as np
+from PIL import Image
+from typing import Dict, Union, List, Optional
+
+
+class ImagePatch:
+    """
+    A class to handle images and their associated masks for creating visual
+    prompts for Vision-Language Models (VLMs).
+
+    Attributes
+    ----------
+        input_image (Union[str, Image.Image, np.ndarray]): Path to the image file, 
+            a PIL Image object, or a numpy array representing the image.
+        masks (Dict[str, Any]): A dictionary of masks associated with the image.
+            Each key consists of a part ID and the value is either 
+            a numpy array or a RLE-encoded binary mask.
+        overlaid_input_image (str): Path to an image where binary part masks are 
+            overlaid on the original image. Each part mask is shown in a distinct 
+            color and labeled with a unique part ID.
+        height (int): The height of the image.
+        width (int): The width of the image.
+
+    Methods
+    -------
+        find_overlapping_masks(self, img_patch: 'ImagePatch', iou_threshold: float = 0.5) -> List[Tuple[str, str]]
+            Given another ImagePatch instance of the same image with a different set of part masks,
+            finds all pairs of parts between the two ImagePatch instances that have overlapping masks
+            based on a specified IoU threshold.
+        get_all_connected_part_pairs(self) -> List[Tuple[str, str]]
+            Returns all pairs of connected parts in an image as a list of tuples.
+        get_part_visibility(self, part_id: str) -> bool
+            Returns the visibility of a part in the image given its part ID.
+        vlm_query(self, query: str) -> str
+            Returns the answer to a basic question (`query`) about the image and masks using a Vision-
+            Language Model (VLM).
+        get_size(self) -> Tuple[int, int]
+            Returns the height and width of the image and mask.
+    """
+
+    def find_overlapping_masks(self, img_patch: 'ImagePatch', iou_threshold: float = 0.5) -> List[Tuple[str, str]]:
+        """Given another ImagePatch instance of the same image with a different set of part masks, 
+        finds all pairs of parts between the two ImagePatch instances that have overlapping masks based on a 
+        specified IoU threshold.
+
+        Parameters
+        ----------
+            img_patch (ImagePatch): Another ImagePatch instance to compare with.
+            iou_threshold (float): The Intersection over Union (IoU) threshold to consider masks
+                as overlapping. Defaults to 0.5.
+
+        Returns
+        -------
+            List[Tuple[str, str]]: A list of tuples where each tuple contains two part IDs
+                (from self and img_patch) that have overlapping masks.
+
+        Examples
+        --------
+        # Which part in the new masks overlaps with part "0" in the original image?
+        >>> def execute_code(input_image, masks_a, masks_b):
+        >>>     image_patch_a = ImagePatch(input_image=input_image, masks=masks_a)
+        >>>     image_patch_b = ImagePatch(input_image=input_image, masks=masks_b)
+        >>>     overlapping_pairs = image_patch_a.find_overlapping_masks(
+        >>>         img_patch=image_patch_b,
+        >>>         iou_threshold=0.5,
+        >>>     )
+        >>>     return overlapping_pairs
+        """
+        return find_overlapping_masks(img_patch, iou_threshold)
+
+    def get_all_connected_part_pairs(self) -> List[Tuple[str, str]]:
+        """Returns all pairs of connected parts in an image as a list of tuples.
+        Uses the overlaid image (of the masks on the original image) to visualize
+        the parts and outputs all connected part pairs with the help of a VLM.
+
+        Returns
+        -------
+            List[Tuple[str, str]]: A list of tuples where each tuple contains two part IDs that are connected.
+
+        Examples
+        --------
+        # Get all connected part pairs in the image.
+        # Which pairs of parts are connected in the image?
+        >>> def execute_code(input_image, masks):
+        >>>     image_patch = ImagePatch(input_image=input_image, masks=masks)
+        >>>     connected_pairs = image_patch.get_all_connected_part_pairs()
+        >>>     return connected_pairs
+
+        # Are parts "0" and "1" connected in the image?
+        >>> def execute_code(input_image, masks):
+        >>>     image_patch = ImagePatch(input_image=input_image, masks=masks)
+        >>>     response = image_patch.get_all_connected_part_pairs()
+        >>>     for pair in response:
+        >>>         if pair == ("0", "1") or pair == ("1", "0"):
+        >>>             return True
+        >>>     return False
+
+        # How many pairs of connected parts are there in the image?
+        >>> def execute_code(input_image, masks):
+        >>>     image_patch = ImagePatch(input_image=input_image, masks=masks)
+        >>>     response = image_patch.get_all_connected_part_pairs()
+        >>>     return len(response)
+        """
+        return get_all_connected_part_pairs(self.overlaid_input_image)
+
+    def get_part_visibility(self, part_id: str) -> bool:
+        """Returns the visibility of a part in the image given its part ID.
+
+        Parameters
+        ----------
+            part_id (str): The part ID, this is an int in string format.
+        Returns
+        -------
+            bool: True if the part is visible, False otherwise.
+
+        Examples
+        --------
+        # Is part "0" visible in the image?
+        >>> def execute_code(input_image, masks):
+        >>>     image_patch = ImagePatch(input_image=input_image, masks=masks)
+        >>>     is_visible = image_patch.get_part_visibility(part_id="0")
+        >>>     return is_visible
+        """
+        return get_part_visibility(part_id)
+
+    def vlm_query(self, query: str) -> str:
+        """Returns the answer to a basic question (`query`) about the image and masks using a Vision-Language Model (VLM).
+        The questions are about basic perception, and are not meant to be used for complex reasoning or external
+        knowledge.
+
+        Parameters
+        ----------
+            query (str): The query string.
+
+        Returns
+        -------
+            str: The response from the VLM model.
+
+        Examples
+        --------
+        # What is shown in the image?
+        >>> def execute_code(input_image, masks):
+        >>>     image_patch = ImagePatch(input_image=input_image, masks=masks)
+        >>>     response = image_patch.vlm_query(
+        >>>         query="What is shown in the image?"
+        >>>     )
+        >>>     return response
+        """
+        return vlm_query(query)
+
+    def get_size(self) -> Tuple[int, int]:
+        """Returns the height and width of the image and mask.
+
+        Returns
+        -------
+            Tuple[int, int]: The height and width of the image and mask.
+        """
+        return self.height, self.width
+
+
+class VideoSegment:
+    """
+    A container object for a video segment that provides operations such as video object
+    segmentation, reversing video clips, etc.
+
+    Attributes
+    ----------
+        video_fn: str
+            Path to the video file
+        h: int
+            Height of the video frames
+        w: int
+            Width of the video frames
+        multi_mask: bool
+            Whether to use multi-mask prediction in the VOS model
+
+    Methods
+    -------
+        return_frames(self)
+            Returns all frames in the video as a numpy array.
+        track_object_segments_in_video(self, prompt_to_track: Dict[str, np.ndarray], frame_idx: int) -> List[Dict[str, np.ndarray]]
+            Tracks the object segments in the entire video given the prompts in a specific frame.
+    """
+
+    def return_frames(self):
+        """Returns all frames in the video as a numpy array.
+
+        Returns
+        -------
+            np.ndarray: Array of shape (T, H, W, 3) containing all video frames.
+        """
+
+    def track_object_segments_in_video(self, prompt_to_track: Dict[str, np.ndarray], frame_idx: int) -> List[Dict[str, np.ndarray]]:
+        """Tracks the object segments in the entire video given the prompts in a specific frame.
+
+        Parameters
+        ----------
+            prompt_to_track (Dict[str, np.ndarray]):
+                A dictionary mapping object IDs (integer values as strings) to their corresponding prompts.
+                Each prompt is a binary mask of shape (H, W), and the object IDs are strings representing integers.
+            frame_idx (int):
+                The index of the frame in the video where the prompts are provided.
+
+        Returns
+        -------
+            List[Dict[str, np.ndarray]]:
+                A list of dictionaries mapping object IDs to their corresponding segmentation masks across the entire video.
+                Each segmentation mask is a binary numpy array of shape (H, W), where H and W are the height and width of the video frames.
+                The list is ordered by frame index, and its length is equal to the number of frames in the video.
+
+        Examples
+        --------
+        >>> # Are Parts 0 and 1 connected in frame 10 of the video?
+        >>> def execute_code(video_fn, frame_idx, masks):
+        >>>    # Here the input frame_idx is the index of the frame at which the masks are provided
+        >>>    video_segmenter = VideoSegment(video_fn=video_fn)
+        >>>    complete_sgmts = video_segmenter.track_object_segments_in_video(
+        >>>        prompt_to_track=masks,
+        >>>        frame_idx=frame_idx,
+        >>>    )
+        >>>    frames = video_segmenter.return_frames()
+        >>>    frame = frames[10]
+        >>>    segments_for_frame_10 = complete_sgmts[10]
+        >>>    image_patch = ImagePatch(
+        >>>        input_image=frame,
+        >>>        mask=segments_for_frame_10,
+        >>>    )
+        >>>    return image_patch.check_part_connectivity(part_id1="0", part_id2="1")
+        """
+        return track_object_segments_in_video(self.video_fn, prompt_to_track, frame_idx)
+
+
+
+# Examples of how to use the API
+--------------------------------
+
+>>> # Which pairs of parts are connected in the image?
+>>> def execute_code(input_image, masks):
+>>>     image_patch = ImagePatch(input_image=input_image, masks=masks)
+>>>     connected_pairs = image_patch.get_all_connected_part_pairs()
+>>>     return connected_pairs
+>>>
+>>>
+>>> # How many parts are visible in the image?
+>>> def execute_code(input_image, masks):
+>>>    image_patch = ImagePatch(input_image=input_image, masks=masks)
+>>>    num_visible_parts = 0
+>>>    for part_id in masks.keys():
+>>>         visibility = image_patch.get_part_visibility(part_id=part_id)
+>>>         if visibility:
+>>>             num_visible_parts += 1
+>>>    return num_visible_parts
+>>>
+>>>
+>>> # Which parts are connected to Part 1 in the shown image?
+>>> # Options:
+>>> # A. Part 0
+>>> # B. Part 2
+>>> # C. Part 3
+>>> # D. Part 4
+>>> def execute_code(input_image, masks):
+>>>     image_patch = ImagePatch(input_image=input_image, masks=masks)
+>>>     connected_part_pairs = image_patch.get_all_connected_part_pairs()
+>>>     connected_to_part_1 = None
+>>>     for part_id in masks.keys():
+>>>         if part_id == "1":
+>>>             continue
+>>>         visibility = image_patch.get_part_visibility(part_id=part_id)
+>>>         is_connected = False
+>>>         if visibility:
+>>>             is_connected = ("1", part_id) in connected_part_pairs or (part_id, "1") in connected_part_pairs
+>>>
+>>>         if is_connected:
+>>>             connected_to_part_1= part_id
+>>>             break
+>>>
+>>>     options = [("A", "0"), ("B", "2"), ("C", "3"), ("D", "4")]
+>>>     for option, part_id in options:
+>>>         if connected_to_part_1 == part_id:
+>>>             return option
+>>>
+>>>
+>>> # Which part in the new masks overlaps with part "0" in the original image?
+>>> # Options:
+>>> # A. Part 0
+>>> # B. Part 4
+>>> # C. Part 5
+>>> # D. Part 2
+>>> def execute_code(input_image, masks_a, masks_b):
+>>>     image_patch_a = ImagePatch(input_image=input_image, masks=masks_a)
+>>>     image_patch_b = ImagePatch(input_image=input_image, masks=masks_b)
+>>>     overlapping_pairs = image_patch_a.find_overlapping_masks(
+>>>         img_patch=image_patch_b,
+>>>         iou_threshold=0.5,
+>>>     )
+>>>     options = [("A", "0"), ("B", "4"), ("C", "5"), ("D", "2")]
+>>>     for option, part_id_b in options:
+>>>         if ("0", part_id_b) in overlapping_pairs or (part_id_b, "0") in overlapping_pairs:
+>>>             return option
+>>>
+>>> # Which parts are connected to Part 1 in frame 25 of the video?
+>>> Options:
+>>> # A. Part 0
+>>> # B. Part 2
+>>> # C. Part 3
+>>> # D. Part 4
+>>> def execute_code(video_fn, input_image, masks, frame_idx):
+>>>     image_patch = ImagePatch(input_image=input_image, masks=masks)
+>>>     video = VideoSegment(video_fn=video_fn)
+>>>     frame_25 = video.return_frames()[25]
+>>>     complete_sgmts = video.track_object_segments_in_video(
+>>>         prompt_to_track=masks,
+>>>         frame_idx=frame_idx,
+>>>     )
+>>>     segmt_25 = complete_sgmts[25]
+>>>     image_patch_25 = ImagePatch(
+>>>         input_image=frame_25,
+>>>         mask=segmt_25,
+>>>     )
+>>>     connected_pairs = image_patch_25.get_all_connected_part_pairs()
+>>>     options = [("A", ("0", "1")), ("B", ("1", "2")), ("C", ("1", "3")), ("D", ("1", "4"))]
+>>>     for option, pair in options:
+>>>         if pair in connected_pairs or (pair[1], pair[0]) in connected_pairs:
+>>>             return option
+>>>
+>>> # Which parts are connected in frame 10 of the video?
+>>> Options:
+>>> A. Parts 0 and 1
+>>> B. Parts 2 and 3
+>>> C. Parts 3 and 0
+>>> D. Parts 4 and 1
+>>> def execute_code(video_fn, input_image, masks, frame_idx):
+>>>    # Here the input frame_idx is the index of the frame at which the masks are provided
+>>>    video_segmenter = VideoSegment(video_fn=video_fn)
+>>>    complete_sgmts = video_segmenter.track_object_segments_in_video(
+>>>        prompt_to_track=masks,
+>>>        frame_idx=frame_idx,
+>>>    )
+>>>    frames = video_segmenter.return_frames()
+>>>    frame = frames[10]
+>>>    segmt = complete_sgmts[10]
+>>>    image_patch = ImagePatch(
+>>>        input_image=frame,
+>>>        mask=segmt,
+>>>    )
+>>>    connected_pairs = image_patch.get_all_connected_part_pairs()
+>>>    options = [("A", ("0", "1")), ("B", ("2", "3")), ("C", ("3", "0")), ("D", ("4", "1"))]
+>>>    for option, pair in options:
+>>>        if pair in connected_pairs or (pair[1], pair[0]) in connected_pairs:
+>>>            return option
+>>>
+>>>
+>>> # Which part is the largest in frame 15 of the video?
+>>> Options:
+>>> A. Part 0
+>>> B. Part 1
+>>> C. Part 2
+>>> D. Part 3
+>>> def execute_code(video_fn, input_image, masks, frame_idx):
+>>>    # Here the input frame_idx is the index of the frame at which the masks are provided
+>>>    video_segmenter = VideoSegment(video_fn=video_fn)
+>>>    complete_sgmts = video_segmenter.track_object_segments_in_video(
+>>>        prompt_to_track=masks,
+>>>        frame_idx=frame_idx,
+>>>    )
+>>>    frames = video_segmenter.return_frames()
+>>>    frame = frames[15]
+>>>    segmt = complete_sgmts[15]
+>>>    image_patch = ImagePatch(
+>>>        input_image=frame,
+>>>        mask=segmt,
+>>>    )
+>>>    largest_part = None
+>>>    largest_area = 0
+>>>    for option, part_id in [("A", "0"), ("B", "1"), ("C", "2"), ("D", "3")]:
+>>>        area = image_patch.get_part_area(part_id=part_id)
+>>>        if area > largest_area:
+>>>            largest_area = area
+>>>            largest_part = option
+>>>    return largest_part
