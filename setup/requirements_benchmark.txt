@@ -194,7 +194,7 @@ typing-extensions==4.15.0
 typing-inspection==0.4.2
 tzdata==2025.2
 urdfpy==0.0.22
-urllib3==2.5.0
+urllib3==2.7.0
 uvicorn==0.37.0
 uvloop==0.21.0
 vllm==0.11.0
