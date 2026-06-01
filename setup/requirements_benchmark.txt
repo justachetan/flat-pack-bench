@@ -197,7 +197,7 @@ urdfpy==0.0.22
 urllib3==2.5.0
 uvicorn==0.37.0
 uvloop==0.21.0
-vllm==0.11.0
+vllm==0.20.0
 wandb==0.13.10
 watchfiles==1.1.0
 wcwidth==0.2.14
