@@ -44,13 +44,13 @@ Download the metadata needed for the benchmark code paths that read from
 `data/scrambled-questions`, and `data/scrambled-segmentation-masks`:
 
 ```bash
-conda run -n fpb python scripts/download_data.py --metadata-only
+conda run -n fpb python data/download_data.py --metadata-only
 ```
 
 If no mode flag is passed, the downloader defaults to `--metadata-only`:
 
 ```bash
-conda run -n fpb python scripts/download_data.py
+conda run -n fpb python data/download_data.py
 ```
 
 <a id="download-modes"></a>
@@ -59,16 +59,16 @@ conda run -n fpb python scripts/download_data.py
 
 | Command | Downloads |
 |---|---|
-| `conda run -n fpb python scripts/download_data.py --metadata-only` | Questions, source YAMLs, segmentation masks, furniture part annotations, scrambled questions, and scrambled segmentation masks. |
-| `conda run -n fpb python scripts/download_data.py --full-data` | Everything from `--metadata-only`, plus `videos/` and `rgb-frames/` from the core dataset. |
-| `conda run -n fpb python scripts/download_data.py --full-eval-cache` | The full eval cache into `data/eval-cache/`. |
-| `conda run -n fpb python scripts/download_data.py --addl-expts` | Everything from the additional experiments dataset. |
-| `conda run -n fpb python scripts/download_data.py --full-data --full-eval-cache --addl-expts` | All benchmark data, eval cache files, and additional experiment artifacts. |
+| `conda run -n fpb python data/download_data.py --metadata-only` | Questions, source YAMLs, segmentation masks, furniture part annotations, scrambled questions, and scrambled segmentation masks. |
+| `conda run -n fpb python data/download_data.py --full-data` | Everything from `--metadata-only`, plus `videos/` and `rgb-frames/` from the core dataset. |
+| `conda run -n fpb python data/download_data.py --full-eval-cache` | The full eval cache into `data/eval-cache/`. |
+| `conda run -n fpb python data/download_data.py --addl-expts` | Everything from the additional experiments dataset. |
+| `conda run -n fpb python data/download_data.py --full-data --full-eval-cache --addl-expts` | All benchmark data, eval cache files, and additional experiment artifacts. |
 
 Use `--data-dir` to write the same layout somewhere else:
 
 ```bash
-conda run -n fpb python scripts/download_data.py --metadata-only --data-dir /tmp/fpb-data
+conda run -n fpb python data/download_data.py --metadata-only --data-dir /tmp/fpb-data
 ```
 
 If Hugging Face returns HTTP 429 during a large first-time download, wait a few

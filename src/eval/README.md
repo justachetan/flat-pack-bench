@@ -70,6 +70,8 @@ conversation template key such as `SEP_MEDIA_FIRST_PROACTIVE_COMMON`,
 `ONLY_IMAGE_FIRST`, `COLLAGE_VP_LEFT_MEDIA_FIRST_PROACTIVE_COMMON`, or
 `CONCAT_VP_FIRST_MEDIA_FIRST_PROACTIVE_COMMON_WITH_THOUGHTS_V2`.
 
+**Note**: `SEP*` pipelines correspond to _Mixed-Media_ prompting in the paper.
+
 The media components include video loading, visual-prompt generation, separate
 media attachment, collage rendering, visual-prompt/video concatenation,
 subsampling, embedding, and optional frame numbering.

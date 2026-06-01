@@ -7,9 +7,6 @@ import argparse
 from pathlib import Path
 from typing import Sequence
 
-from huggingface_hub import snapshot_download
-
-
 CORE_REPO = "justachetan/flat-pack-bench"
 MISC_REPO = "justachetan/flat-pack-bench-misc"
 EVAL_REPO = "justachetan/flat-pack-bench-evals"
@@ -46,6 +43,8 @@ def _download(
     allow_patterns: Sequence[str] | None,
     label: str,
 ) -> None:
+    from huggingface_hub import snapshot_download
+
     local_dir.mkdir(parents=True, exist_ok=True)
 
     print(f"Downloading {label}")
