@@ -115,7 +115,7 @@ parso==0.8.5
 partial-json-parser==0.2.1.1.post6
 pathtools==0.1.2
 pexpect==4.9.0
-pillow==11.3.0
+pillow==12.2.0
 prometheus-client==0.23.1
 prometheus-fastapi-instrumentator==7.1.0
 prompt-toolkit==3.0.52
