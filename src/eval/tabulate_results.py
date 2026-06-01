@@ -1,3 +1,5 @@
+"""Tabulate Flat-Pack Bench results and bootstrap confidence intervals."""
+
 import pyrootutils
 
 root = pyrootutils.setup_root(
